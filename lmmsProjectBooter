@@ -1,0 +1,13 @@
+
+#!/bin/bash
+
+# Load projects from a specific directory into LMMS
+
+currDir="$(pwd)"
+cd $HOME/Documents/lmms/projects
+
+fileInQuestion=$(find . -name "*.mmpz" | dmenu -l 25 -fn "Monospace:bold:pixelsize=16")
+
+echo "Opening $fileInQuestion..."; lmms "$fileInQuestion"
+cd $currDir
+
