@@ -11,4 +11,4 @@
 
 This projects depends on the following binaries:
 
-- [dmenu]("https://tools.suckless.org/dmenu/"), used for any list in the repo, another alternative is [fzf]("https://github.com/junegunn/fzf")
+- [dmenu](https://tools.suckless.org/dmenu/), used for any list in the repo, another alternative is [fzf](https://github.com/junegunn/fzf)
