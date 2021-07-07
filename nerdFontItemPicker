@@ -2,4 +2,7 @@
 
 # Return specific nerd font characters into stdout
 
-cat $HOME/CodeRepos/GitHubRepos/linux-scripts/deps/nerdFontsItemPicker | dmenu -l 25 -fn "Monospace:bold:pixelsize=16" | awk '{print $2}'
+locationOfFile=$(which nerdFontItemPicker)
+locationOfFile=${locationOfFile%nerdFontItemPicker}deps/nerdFontItemPicker
+
+cat $locationOfFile | dmenu -l 25 -fn "Monospace:bold:pixelsize=16" | awk '{print $2}'
