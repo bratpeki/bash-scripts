@@ -1,8 +1,15 @@
+
 #!/bin/bash
 
-# Return specific nerd font characters into stdout
+# Name:        nerdFontItemPicker
+# Author:      Petar Katić (bratpeki)
+# Description: Return specific nerd font characters into stdout
 
 locationOfFile=$(which nerdFontItemPicker)
+# This command relies on the fact that the
+# script path is added to the PATH variable
+
 locationOfFile=${locationOfFile%nerdFontItemPicker}deps/nerdFontItemPicker
 
 cat $locationOfFile | dmenu -l 25 -fn "Monospace:bold:pixelsize=16" | awk '{print $2}'
+
