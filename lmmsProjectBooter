@@ -4,18 +4,22 @@
 # Name:        lmmsProjectBooter
 # Author:      Petar Katić (bratpeki)
 # Description: Load projects from a specific directory into LMMS
+# Arguments:  -d ( Debug mode - Get LMMS debug output )
 
 currDir="$(pwd)"
 cd $HOME/Documents/lmms/projects
 
 fileInQuestion=$(find . -name "*.mmpz" | dmenu -l 25 -fn "Monospace:bold:pixelsize=16")
 
-if [ -z "$fileInQuestion" ]
-then
+if [ -z "$fileInQuestion" ]; then
 	echo "No selection, exiting..."
 else
 	echo "Opening \"$fileInQuestion...\""
-	lmms "$fileInQuestion"
+	if [ "$1" == "-d" ] || [ "$1" == "-D" ]; then
+		lmms "$fileInQuestion"
+	else
+		lmms "$fileInQuestion" &> /dev/null
+	fi
 fi
 
 cd $currDir
