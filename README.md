@@ -2,10 +2,10 @@
 
 ## Current list:
 
-| Name               | Function                                           |
-| -                  | -                                                  |
-| lmmsProjectBooter  | Load projects from a specific directory into LMMS  |
-| nerdFontItemPicker | Return specific nerd font characters into `stdout` |
+| Name               | Function                                           | Arguments |
+| -                  | -                                                  | -         |
+| lmmsProjectBooter  | Load projects from a specific directory into LMMS  | -d        |
+| nerdFontItemPicker | Return specific nerd font characters into `stdout` | None      |
 
 ## Dependencies
 
