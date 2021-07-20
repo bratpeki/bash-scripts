@@ -1,0 +1,14 @@
+
+#!/bin/bash
+
+# Name:        wttrin
+# Author:      Petar Katić (bratpeki)
+# Description: Read wetter information via curl using a custom location input
+# Arguments:
+#              -s (Silent mode, no text before input)
+
+if [ "$1" != "-s" ] && [ "$1" != "-S" ]; then
+	printf "Location (Don't use spaces): "
+fi
+read var; curl wttr.in/~$var
+

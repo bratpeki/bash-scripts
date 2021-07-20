@@ -1,0 +1,14 @@
+
+#!/bin/bash
+
+# Name:        wttrcode
+# Author:      Petar Katić (bratpeki)
+# Description: Read wetter information via curl using location codes
+
+locationOfFile=$(which wttrcode)
+# This command relies on the fact that the
+# script path is added to the PATH variable
+locationOfFile=${locationOfFile%wttrcode}deps/wetterLocs
+
+cat $locationOfFile | dmenu -i -l 25 | xargs -I {} curl wttr.in/{}
+
