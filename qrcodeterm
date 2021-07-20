@@ -1,0 +1,19 @@
+
+#!/bin/bash
+
+# Name:        qrcodeterm
+# Author:      Petar Katić (bratpeki)
+# Description: Generate QR codes in the terminal
+
+if [ $# -eq 0 ]; then
+	echo No arguements passed, use \"curl qrenco.de\" for qrenco.de\'s start page
+else
+	if [ $# -gt 1 ]; then
+		echo All arguements are concatenated into one
+	fi
+	for com in "$*"; do
+		echo Generating \"$com\"
+		printf "$com" | curl -F-=\<- qrenco.de
+	done
+fi
+

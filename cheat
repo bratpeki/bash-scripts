@@ -4,9 +4,10 @@
 # Name:        cheat
 # Author:      Petar Katić (bratpeki)
 # Description: Easily bring up a curl cheat sheet from cheat.sh
+# Arguments:   Infinitely many
 
-if [ "$#" -eq 0 ]; then
-	echo "No arguements passed, use \"curl cheat.sh\" for cheat.sh's start page"
+if [ $# -eq 0 ]; then
+	echo No arguements passed, use \"curl cheat.sh\" for cheat.sh\'s start page
 else
 	for com in $*; do
 		curl cheat.sh/$com
