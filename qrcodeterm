@@ -4,6 +4,7 @@
 # Name:        qrcodeterm
 # Author:      Petar Katić (bratpeki)
 # Description: Generate QR codes in the terminal
+# Arguments:   Infinitely many
 
 if [ $# -eq 0 ]; then
 	echo No arguements passed, use \"curl qrenco.de\" for qrenco.de\'s start page
