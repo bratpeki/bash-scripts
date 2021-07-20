@@ -7,6 +7,7 @@
 | lmmsProjectBooter  | Load projects from a specific directory into LMMS  | -d              |
 | nerdFontItemPicker | Return specific nerd font characters into `stdout` |                 |
 | cheat              | Easily bring up a curl cheat sheet from cheat.sh   | Infinitely many |
+| qrcodeterm         | Generate QR codes in the terminal                  | Infinitely many |
 
 ## Dependencies
 
