@@ -2,10 +2,11 @@
 
 ## Current list:
 
-| Name               | Function                                           | Arguments |
-| -                  | -                                                  | -         |
-| lmmsProjectBooter  | Load projects from a specific directory into LMMS  | -d        |
-| nerdFontItemPicker | Return specific nerd font characters into `stdout` | None      |
+| Name               | Function                                           | Arguments       |
+| -                  | -                                                  | -               |
+| lmmsProjectBooter  | Load projects from a specific directory into LMMS  | -d              |
+| nerdFontItemPicker | Return specific nerd font characters into `stdout` |                 |
+| cheat              | Easily bring up a curl cheat sheet from cheat.sh   | Infinitely many |
 
 ## Dependencies
 
@@ -22,3 +23,4 @@ PATH=$PATH:~/github/linux-scripts
 This projects depends on the following binaries:
 
 - [dmenu](https://tools.suckless.org/dmenu/), used for any list in the repo, another alternative is [fzf](https://github.com/junegunn/fzf)
+- [curl](https://curl.se/), used for accessing terminal-friendly web pages
