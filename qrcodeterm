@@ -7,7 +7,7 @@
 # Arguments:   Infinitely many
 
 if [ $# -eq 0 ]; then
-	echo No arguements passed, use \"curl qrenco.de\" for qrenco.de\'s start page
+	echo No arguments passed, use \"curl qrenco.de\" for qrenco.de\'s start page
 else
 	while(($#)); do
 		echo Generating \"$1\"

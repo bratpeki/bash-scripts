@@ -2,14 +2,21 @@
 
 ## Current list:
 
-| Name               | Function                                                           | Arguments               |
-| -                  | -                                                                  | -                       |
-| cheat              | Easily bring up a curl cheat sheet from cheat.sh                   | Infinitely many         |
-| lmmsProjectBooter  | Load projects from a specific directory into LMMS                  | -d                      |
-| nerdFontItemPicker | Return specific nerd font characters into `stdout`                 |                         |
-| qrcodeterm         | Generate QR codes in the terminal                                  | Infinitely many         |
-| wttrcode           | Read wetter information via curl using location codes              |                         |
-| wttrin             | Read wetter information via curl using a custom location arguement | None or infinitely many |
+The list below shows the scripts present in the repo, a short description and possible arguments.
+Arguments can be seperated into:
+
+- I.M. (Infinitely many, the user can pass as many arguments which are then individually processed or concatanated)
+- None
+- Specific arguments (Such as -e, --example-argument, etc)
+
+| Name               | Function                                                           | Arguments       |
+| -                  | -                                                                  | -               |
+| cheat              | Easily bring up a curl cheat sheet from cheat.sh                   | I.M.            |
+| lmmsProjectBooter  | Load projects from a specific directory into LMMS                  | -d (Debug mode) |
+| nerdFontItemPicker | Return specific nerd font characters into `stdout`                 | None            |
+| qrcodeterm         | Generate QR codes in the terminal                                  | I.M.            |
+| wttrcode           | Read wetter information via curl using location codes              | None            |
+| wttrin             | Read wetter information via curl using a custom location argument  | None or I.M.    |
 
 ## Dependencies
 

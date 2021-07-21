@@ -3,7 +3,7 @@
 
 # Name:        wttrin
 # Author:      Petar Katić (bratpeki)
-# Description: Read wetter information via curl using a custom location arguement
+# Description: Read wetter information via curl using a custom location argument
 # Arguments:   None or infinitely many
 
 if [ $# -eq 0 ]; then
