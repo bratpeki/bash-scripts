@@ -2,14 +2,14 @@
 
 ## Current list:
 
-| Name               | Function                                                           | Arguments       |
-| -                  | -                                                                  | -               |
-| cheat              | Easily bring up a curl cheat sheet from cheat.sh                   | Infinitely many |
-| lmmsProjectBooter  | Load projects from a specific directory into LMMS                  | -d              |
-| nerdFontItemPicker | Return specific nerd font characters into `stdout`                 |                 |
-| qrcodeterm         | Generate QR codes in the terminal                                  | Infinitely many |
-| wttrcode           | Read wetter information via curl using location codes              |                 |
-| wttrin             | Read wetter information via curl using a custom location arguement | Infinitely many |
+| Name               | Function                                                           | Arguments               |
+| -                  | -                                                                  | -                       |
+| cheat              | Easily bring up a curl cheat sheet from cheat.sh                   | Infinitely many         |
+| lmmsProjectBooter  | Load projects from a specific directory into LMMS                  | -d                      |
+| nerdFontItemPicker | Return specific nerd font characters into `stdout`                 |                         |
+| qrcodeterm         | Generate QR codes in the terminal                                  | Infinitely many         |
+| wttrcode           | Read wetter information via curl using location codes              |                         |
+| wttrin             | Read wetter information via curl using a custom location arguement | None or infinitely many |
 
 ## Dependencies
 

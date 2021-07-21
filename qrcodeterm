@@ -12,7 +12,7 @@ else
 	while(($#)); do
 		echo Generating \"$1\"
 		printf "$1" | curl -F-=\<- qrenco.de
-	shift
+		shift
 	done
 fi
 

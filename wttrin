@@ -4,9 +4,15 @@
 # Name:        wttrin
 # Author:      Petar Katić (bratpeki)
 # Description: Read wetter information via curl using a custom location arguement
-# Arguments:   Infinitely many
+# Arguments:   None or infinitely many
 
-while(($#)); do
+if [ $# -eq 0 ]; then
+	echo No arguments, getting weather for your location
+	curl wttr.in
+	exit
+fi
+
+while [ $# -gt 0 ]; do
 	echo Looking up weather for \"$1\"
 	curl wttr.in/~$1
 	shift
