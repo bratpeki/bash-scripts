@@ -9,12 +9,10 @@
 if [ $# -eq 0 ]; then
 	echo No arguements passed, use \"curl qrenco.de\" for qrenco.de\'s start page
 else
-	if [ $# -gt 1 ]; then
-		echo All arguements are concatenated into one
-	fi
-	for com in "$*"; do
-		echo Generating \"$com\"
-		printf "$com" | curl -F-=\<- qrenco.de
+	while(($#)); do
+		echo Generating \"$1\"
+		printf "$1" | curl -F-=\<- qrenco.de
+	shift
 	done
 fi
 
