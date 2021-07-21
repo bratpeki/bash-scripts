@@ -1,4 +1,4 @@
-# A bunch of Linux Bash scripts I have created.
+# A bunch of Bash scripts I have created.
 
 ## Current list:
 
@@ -32,4 +32,5 @@ This projects depends on the following binaries:
 
 The following scripts were made possible by:
 
-- ⭐ [Igor Chubin](https://github.com/chubin)'s [wttr.in](https://github.com/chubin/wttr.in) and [cheat.sh](https://github.com/chubin/cheat.sh)
+- ⭐ [Igor Chubin](https://github.com/chubin)'s [wttr.in](https://github.com/chubin/wttr.in), [qrenco.de](https://github.com/chubin/qrenco.de) and [cheat.sh](https://github.com/chubin/cheat.sh)
+
