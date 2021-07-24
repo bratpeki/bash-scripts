@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # Name:        nerdFontItemPicker
@@ -11,5 +10,4 @@ locationOfFile=$(which nerdFontItemPicker)
 
 locationOfFile=${locationOfFile%nerdFontItemPicker}deps/nerdFontItemPicker
 
-cat $locationOfFile | dmenu -l 25 -fn "Monospace:bold:pixelsize=16" | awk '{print $2}'
-
+dmenu -l 25 -fn "Monospace:bold:pixelsize=16" < "$locationOfFile" | awk '{print $2}'

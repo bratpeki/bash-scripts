@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # Name:        qrcodeterm
@@ -10,9 +9,8 @@ if [ $# -eq 0 ]; then
 	echo No arguments passed, use \"curl qrenco.de\" for qrenco.de\'s start page
 else
 	while(($#)); do
-		echo Generating \"$1\"
-		printf "$1" | curl -F-=\<- qrenco.de
+		echo Generating \""$1"\"
+		printf '%s' "$1" | curl -F-=\<- qrenco.de
 		shift
 	done
 fi
-

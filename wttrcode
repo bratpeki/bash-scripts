@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # Name:        wttrcode
@@ -10,5 +9,4 @@ locationOfFile=$(which wttrcode)
 # script path is added to the PATH variable
 locationOfFile=${locationOfFile%wttrcode}deps/wetterLocs
 
-cat $locationOfFile | dmenu -i -l 25 | xargs -I {} curl wttr.in/{}
-
+dmenu -i -l 25 < "$locationOfFile" | xargs -I {} curl wttr.in/{}

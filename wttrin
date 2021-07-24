@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # Name:        wttrin
@@ -8,13 +7,12 @@
 
 if [ $# -eq 0 ]; then
 	echo No arguments, getting weather for your location
-	curl wttr.in
+	curl wttr.in/
 	exit
 fi
 
 while [ $# -gt 0 ]; do
-	echo Looking up weather for \"$1\"
-	curl wttr.in/~$1
+	echo Looking up weather for \""$1"\"
+	curl wttr.in/~"$1"
 	shift
 done
-

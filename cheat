@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # Name:        cheat
@@ -9,8 +8,7 @@
 if [ $# -eq 0 ]; then
 	echo No arguements passed, use \"curl cheat.sh\" for cheat.sh\'s start page
 else
-	for com in $*; do
-		curl cheat.sh/$com
+	for com in "$@"; do
+		curl cheat.sh/"$com"
 	done
 fi
-
