@@ -11,6 +11,7 @@ Arguments can be seperated into:
 
 | Name               | Function                                                           | Arguments       |
 | -                  | -                                                                  | -               |
+| bgman              | Manage background images using feh                                 | -l (Load)       |
 | cheat              | Easily bring up a curl cheat sheet from cheat.sh                   | I.M.            |
 | lmmsProjectBooter  | Load projects from a specific directory into LMMS                  | -d (Debug mode) |
 | nerdFontItemPicker | Return specific nerd font characters into `stdout`                 | None            |
@@ -34,6 +35,7 @@ This projects depends on the following binaries:
 
 - [dmenu](https://tools.suckless.org/dmenu/), used for any list in the repo, another alternative is [fzf](https://github.com/junegunn/fzf)
 - [curl](https://curl.se/), used for accessing terminal-friendly web pages
+- [feh](https://github.com/derf/feh), used by ``bgman`` for loading background images
 
 ## Thanks
 

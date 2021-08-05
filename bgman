@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Name:        bgman
+# Author:      Petar Katić (bratpeki)
+# Description: Manage background images using feh
+# Arguments:
+#              -l (Load - Load your saved configuration)
+
+locationOfFile="$(which bggen)"
+# This command relies on the fact that the
+# script path is added to the PATH variable
+locationOfFile="${locationOfFile%bggen}deps/bggen"
+
+if [ "$1" == "-l" ]; then
+	feh --bg-$(sed '2q;d' "$locationOfFile") "$(sed '1q;d' "$locationOfFile")"
+else
+	pictureLocation="/home/peki/Pictures/wg/"
+	pictureLocation="$(find $pictureLocation -type f | dmenu -p "Picture: " -i -l 25 -fn "Monospace:bold:pixelsize=16")"
+	pictureMode="$(printf "center\nfill\nmax\nscale\ntile" | dmenu -p "Mode: " -i -l 25 -fn "Monospace:bold:pixelsize=16")"
+
+	if [ -z "$pictureLocation" ] || [ -z "$pictureMode" ]; then
+		exit
+	fi
+
+	feh --bg-$pictureMode "$pictureLocation"
+
+	rm "$locationOfFile"; touch "$locationOfFile"
+	printf "$pictureLocation\n$pictureMode" > "$locationOfFile"
+
+fi

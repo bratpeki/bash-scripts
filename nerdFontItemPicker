@@ -7,7 +7,6 @@
 locationOfFile=$(which nerdFontItemPicker)
 # This command relies on the fact that the
 # script path is added to the PATH variable
-
 locationOfFile=${locationOfFile%nerdFontItemPicker}deps/nerdFontItemPicker
 
 dmenu -l 25 -fn "Monospace:bold:pixelsize=16" < "$locationOfFile" | awk '{print $2}'

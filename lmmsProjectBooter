@@ -16,9 +16,9 @@ if [ -z "$fileInQuestion" ]; then
 else
 	echo Opening \""$fileInQuestion"...\"
 	if [ "$1" == "-d" ] || [ "$1" == "-D" ]; then
-		lmms "$fileInQuestion"
+		lmms "$fileInQuestion" &
 	else
-		lmms "$fileInQuestion" &> /dev/null
+		lmms "$fileInQuestion" &> /dev/null &
 	fi
 fi
 
