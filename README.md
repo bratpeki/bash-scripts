@@ -13,6 +13,7 @@ Arguments can be seperated into:
 | -                  | -                                                                  | -               |
 | bgman              | Manage background images using feh                                 | -l (Load)       |
 | cheat              | Easily bring up a curl cheat sheet from cheat.sh                   | I.M.            |
+| kblayout           | Manage keyboard layouts in X                                       | None            |
 | lmmsProjectBooter  | Load projects from a specific directory into LMMS                  | -d (Debug mode) |
 | nerdFontItemPicker | Return specific nerd font characters into `stdout`                 | None            |
 | qrcodeterm         | Generate QR codes in the terminal                                  | I.M.            |
