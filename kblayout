@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Name:        kblayout
+# Author:      Petar Katić (bratpeki)
+# Description: Manage keyboard layouts in X
+
+sel="$(localectl list-x11-keymap-layouts | dmenu -i -l 25 -fn "monospace:bold:pixelsize=16")"
+
+if [ ! -z "$sel" ]; then
+	setxkbmap "$sel"
+fi
+
