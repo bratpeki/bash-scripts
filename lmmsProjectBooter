@@ -12,7 +12,7 @@ cd "$HOME"/Documents/lmms/projects || exit
 fileInQuestion=$(find . -name "*.mmpz" | dmenu -i -l 25 -fn "monospace:bold:pixelsize=16")
 
 if [ -z "$fileInQuestion" ]; then
-	echo No selection, exiting...
+	notify-send "lmmsProjectBooter" "No selection, exiting..." -t 3000
 else
 	echo Opening \""$fileInQuestion"...\"
 	if [ "$1" == "-d" ] || [ "$1" == "-D" ]; then

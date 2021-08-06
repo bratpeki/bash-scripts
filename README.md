@@ -9,16 +9,16 @@ Arguments can be seperated into:
 - None
 - Specific arguments (Such as -e, --example-argument, etc)
 
-| Name               | Function                                                           | Arguments       | Dependencies             |
-| -                  | -                                                                  | -               | -                        |
-| bgman              | Manage background images using feh                                 | -l (Load)       | feh                      |
-| cheat              | Easily bring up a curl cheat sheet from cheat.sh                   | I.M.            | curl                     |
-| kblayout           | Manage keyboard layouts in X                                       | None            | X (setxkbmap, localectl) |
-| lmmsProjectBooter  | Load projects from a specific directory into LMMS                  | -d (Debug mode) | dmenu, lmms              |
-| nerdFontItemPicker | Return specific nerd font characters into `stdout`                 | None            | dmenu                    |
-| qrcodeterm         | Generate QR codes in the terminal                                  | I.M.            | curl                     |
-| wttrcode           | Read wetter information via curl using location codes              | None            | curl, dmenu              |
-| wttrin             | Read wetter information via curl using a custom location argument  | None or I.M.    | curl                     |
+| Name               | Function                                                   | Arguments       | Dependencies             |
+| -                  | -                                                          | -               | -                        |
+| bgman              | Manage background images using ``feh``                     | -l (Load)       | feh                      |
+| cheat              | Easily bring up a ``curl`` cheat sheet from cheat.sh       | I.M.            | curl                     |
+| kblayout           | Manage keyboard layouts in ``X``                           | None            | X (setxkbmap, localectl) |
+| lmmsProjectBooter  | Load projects from a specific directory into ``LMMS``      | -d (Debug mode) | dmenu, lmms              |
+| nerdFontItemPicker | Return specific nerd font characters into `stdout`         | None            | dmenu                    |
+| qrcodeterm         | Generate QR codes in the terminal                          | I.M.            | curl                     |
+| wttrcode           | Read wetter information via ``curl`` using location codes  | None            | curl, dmenu              |
+| wttrin             | Read wetter information via ``curl`` using input arguments | None or I.M.    | curl                     |
 
 ## Requirements
 
@@ -30,7 +30,7 @@ If you cloned the repository to `~/github/linux-scripts`, you should add the fol
 PATH=$PATH:~/github/linux-scripts
 ```
 
-Adding these scripts to a path is necessary, because many of them use ``which`` to find out where they are and access files in ``deps\``
+Adding these scripts to ``$PATH`` is necessary, because many of them use ``which`` to find out where they are and access files in ``deps\``
 
 ### Additional binaries
 

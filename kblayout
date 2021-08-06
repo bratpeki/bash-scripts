@@ -3,8 +3,20 @@
 # Name:        kblayout
 # Author:      Petar Katić (bratpeki)
 # Description: Manage keyboard layouts in X
+#              deps/kblayout is to be edited manually
+# Arguments:
+#              -f ( Favorites - List favorites from a file)
 
-sel="$(localectl list-x11-keymap-layouts | dmenu -i -l 25 -fn "monospace:bold:pixelsize=16")"
+locationOfFile=$(which kblayout)
+# This command relies on the fact that the
+# script path is added to the PATH variable
+locationOfFile=${locationOfFile%kblayout}deps/kblayout
+
+if [ "$1" == "-f" ] || [ "$1" == "-F" ]; then
+	sel="$(dmenu -i -l 25 -fn "monospace:bold:pixelsize=16" < "$locationOfFile")"
+else
+	sel="$(localectl list-x11-keymap-layouts | dmenu -i -l 25 -fn "monospace:bold:pixelsize=16")"
+fi
 
 if [ ! -z "$sel" ]; then
 	setxkbmap "$sel"

@@ -11,7 +11,7 @@ locationOfFile="$(which bgman)"
 # script path is added to the PATH variable
 locationOfFile="${locationOfFile%bgman}deps/bgman"
 
-if [ "$1" == "-l" ]; then
+if [ "$1" == "-l" ] || [ "$1" == "-L" ]; then
 	feh --bg-$(sed '2q;d' "$locationOfFile") "$(sed '1q;d' "$locationOfFile")"
 else
 	pictureLocation="/home/peki/Pictures/wg/"
