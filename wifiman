@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo "Getting networks..."
+nmcliAll="$(nmcli dev wifi)"
+nmcliLines="$(echo "$nmcliAll" | wc -l)"
+
+networkRaw="$(echo "$nmcliAll" | tail -n $(($nmcliLines - 1)) | dmenu -p "Network:" -l 25)"
+
+if [ -z "$networkRaw" ]; then
+	echo "No selection, exiting..."
+	exit
+fi
+
+if [ "$(echo "$networkRaw" | head -c 1)" == "*" ]; then
+	# Network selected
+	ssid="$(echo "$networkRaw" | awk -F "  " '{ print $5 }')"
+else
+	ssid="$(echo "$networkRaw" | awk -F "  " '{ print $6 }')"
+fi
+
+nmcli device wifi connect "$ssid" --ask
+

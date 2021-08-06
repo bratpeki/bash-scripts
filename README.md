@@ -9,18 +9,18 @@ Arguments can be seperated into:
 - None
 - Specific arguments (Such as -e, --example-argument, etc)
 
-| Name               | Function                                                           | Arguments       |
-| -                  | -                                                                  | -               |
-| bgman              | Manage background images using feh                                 | -l (Load)       |
-| cheat              | Easily bring up a curl cheat sheet from cheat.sh                   | I.M.            |
-| kblayout           | Manage keyboard layouts in X                                       | None            |
-| lmmsProjectBooter  | Load projects from a specific directory into LMMS                  | -d (Debug mode) |
-| nerdFontItemPicker | Return specific nerd font characters into `stdout`                 | None            |
-| qrcodeterm         | Generate QR codes in the terminal                                  | I.M.            |
-| wttrcode           | Read wetter information via curl using location codes              | None            |
-| wttrin             | Read wetter information via curl using a custom location argument  | None or I.M.    |
+| Name               | Function                                                           | Arguments       | Dependencies             |
+| -                  | -                                                                  | -               | -                        |
+| bgman              | Manage background images using feh                                 | -l (Load)       | feh                      |
+| cheat              | Easily bring up a curl cheat sheet from cheat.sh                   | I.M.            | curl                     |
+| kblayout           | Manage keyboard layouts in X                                       | None            | X (setxkbmap, localectl) |
+| lmmsProjectBooter  | Load projects from a specific directory into LMMS                  | -d (Debug mode) | dmenu, lmms              |
+| nerdFontItemPicker | Return specific nerd font characters into `stdout`                 | None            | dmenu                    |
+| qrcodeterm         | Generate QR codes in the terminal                                  | I.M.            | curl                     |
+| wttrcode           | Read wetter information via curl using location codes              | None            | curl, dmenu              |
+| wttrin             | Read wetter information via curl using a custom location argument  | None or I.M.    | curl                     |
 
-## Dependencies
+## Requirements
 
 ### Adding linux-scripts to PATH
 
@@ -29,6 +29,8 @@ If you cloned the repository to `~/github/linux-scripts`, you should add the fol
 ```sh
 PATH=$PATH:~/github/linux-scripts
 ```
+
+Adding these scripts to a path is necessary, because many of them use ``which`` to find out where they are and access files in ``deps\``
 
 ### Additional binaries
 
