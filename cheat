@@ -4,6 +4,20 @@
 # Author:      Petar Katić (bratpeki)
 # Description: Easily bring up a curl cheat sheet from cheat.sh
 # Arguments:   Infinitely many
+# Example:
+#
+#     $ cheat curl
+#
+#     cheat.sheets:curl
+#     curl
+#     Command-line tool for transferring data with URL syntax
+#
+#     # Process a single GET request, and show its output on stdout.
+#     curl http://path.to.the/file
+#
+#     # Download a file and specify a new filename.
+#     curl http://example.com/file.zip -o new_file.zip
+#     ...
 
 if [ $# -eq 0 ]; then
 	echo No arguements passed, use \"curl cheat.sh\" for cheat.sh\'s start page

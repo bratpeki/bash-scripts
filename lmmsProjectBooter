@@ -5,6 +5,7 @@
 # Description: Load projects from a specific directory into LMMS
 # Arguments:
 #              -d ( Debug mode - Get LMMS debug output )
+# Example:     None provided, script uses graphical tool(s)
 
 currDir="$(pwd)"
 cd "$HOME"/Documents/lmms/projects || exit

@@ -2,17 +2,17 @@
 
 ## Current list:
 
-| Name               | Function                                                    | Dependencies             |
-| -                  | -                                                           | -                        |
-| bgman              | Manage background images using ``feh``                      | feh                      |
-| brightness         | Control the display brightness via ``xrandr``               | X (xrandr)               |
-| cheat              | Easily bring up a ``curl`` cheat sheet from cheat.sh        | curl                     |
-| kblayout           | Manage keyboard layouts in ``X``                            | X (setxkbmap, localectl) |
-| lmmsProjectBooter  | Load projects from a specific directory into ``LMMS``       | dmenu, lmms              |
-| nerdFontItemPicker | Return specific nerd font characters into `stdout`          | dmenu                    |
-| qrcodeterm         | Generate QR codes in the terminal                           | curl                     |
-| wtrcode            | Read weather information via ``curl`` using location codes  | curl, dmenu              |
-| wtrin              | Read weather information via ``curl`` using input arguments | curl                     |
+| Name               | Function                                                    | Dependencies             | Type                 |
+| -                  | -                                                           | -                        | -                    |
+| bgman              | Manage background images using ``feh``                      | feh                      | dmenu                |
+| brightness         | Control the display brightness via ``xrandr``               | X (xrandr)               | terminal             |
+| cheat              | Easily bring up a ``curl`` cheat sheet from cheat.sh        | curl                     | terminal             |
+| kblayout           | Manage keyboard layouts in ``X``                            | X (setxkbmap, localectl) | terminal args, dmenu |
+| lmmsProjectBooter  | Load projects from a specific directory into ``LMMS``       | dmenu, lmms              | terminal args, dmenu |
+| nerdFontItemPicker | Return specific nerd font characters into `stdout`          | dmenu                    | terminal out, dmenu  |
+| qrcodeterm         | Generate QR codes in the terminal                           | curl                     | terminal             |
+| wtrcode            | Read weather information via ``curl`` using location codes  | curl, dmenu              | terminal out, dmenu  |
+| wtrin              | Read weather information via ``curl`` using input arguments | curl                     | terminal             |
 
 ## Requirements
 
@@ -43,12 +43,12 @@ $HOME/.config/bash-scripts/
 
 Scripts that use configuration files are listed below:
 
-| Script             | Reason                    | Should it be manually edited? |
+| Script             | Intended use              | Should it be manually edited? |
 | -                  | -                         | -                             |
-| bgman              | Picutre location and mode | ✖                             |
-| kblayout           | Favorite layouts          | ✓                             |
-| nerdFontItemPicker | Nerd font characters      | ✓                             |
-| wtrcode            | Weather codes             | ✓                             |
+| bgman              | Picutre location and mode | ☒                             |
+| kblayout           | Favorite layouts          | ☑                             |
+| nerdFontItemPicker | Nerd font characters      | ☑                             |
+| wtrcode            | Weather codes             | ☑                             |
 
 ## Thanks
 
