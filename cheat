@@ -2,6 +2,7 @@
 
 # Name:        cheat
 # Author:      Petar Katić (bratpeki)
+# Type:        terminal
 # Description: Easily bring up a curl cheat sheet from cheat.sh
 # Arguments:   Infinitely many
 # Example:

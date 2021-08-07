@@ -2,6 +2,7 @@
 
 # Name:        wifiman
 # Author:      Petar Katić (bratpeki)
+# Type:        terminal in, dmenu
 # Description: nmcli-based wireless connection manager
 
 echo "Getting networks..."

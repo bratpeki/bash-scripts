@@ -2,6 +2,7 @@
 
 # Name:        wtrcode
 # Author:      Petar Katić (bratpeki)
+# Type:        terminal out, dmenu
 # Description: Read weather information via curl using location codes
 
 locationOfFile="$HOME/.config/bash-scripts/wtrcode"

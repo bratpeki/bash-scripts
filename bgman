@@ -2,6 +2,7 @@
 
 # Name:        bgman
 # Author:      Petar Katić (bratpeki)
+# Type:        dmenu
 # Description: Manage background images using feh
 #              This script is intended to be used on WM's, since most, if
 #              not all modern DE's have their own background image tools.

@@ -2,6 +2,7 @@
 
 # Name:        brightness
 # Author:      Petar Katić (bratpeki)
+# Type:        terminal
 # Description: Control the screen brightness via ``xrandr``
 #              The "display" variable will contain the display whose brightness
 #              will be edited, if you have multiple desktops you could set up a
