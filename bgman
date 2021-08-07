@@ -6,15 +6,12 @@
 # Arguments:
 #              -l (Load - Load your saved configuration)
 
-locationOfFile="$(which bgman)"
-# This command relies on the fact that the
-# script path is added to the PATH variable
-locationOfFile="${locationOfFile%bgman}deps/bgman"
+locationOfFile="$HOME/.config/bash-scripts/bgman"
 
 if [ "$1" == "-l" ] || [ "$1" == "-L" ]; then
 	feh --bg-$(sed '2q;d' "$locationOfFile") "$(sed '1q;d' "$locationOfFile")"
 else
-	pictureLocation="/home/peki/Pictures/wg/"
+	pictureLocation="/home/peki/Pictures/wg/" # This location is meant to be manually edited
 	pictureLocation="$(find $pictureLocation -type f | dmenu -p "Picture: " -i -l 25 -fn "monospace:bold:pixelsize=16")"
 	pictureMode="$(printf "center\nfill\nmax\nscale\ntile" | dmenu -p "Mode: " -i -l 25 -fn "monospace:bold:pixelsize=16")"
 
@@ -24,9 +21,9 @@ else
 
 	feh --bg-$pictureMode "$pictureLocation"
 
-	# This line will show an error if the file doesn't exist
-	# This, however, will not break the program and has no special need to be checked
-	rm "$locationOfFile"
+	if test -f "$locationOfFile"; then
+		rm "$locationOfFile"
+	fi
 
 	touch "$locationOfFile"
 	printf "$pictureLocation\n$pictureMode" > "$locationOfFile"

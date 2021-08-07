@@ -9,17 +9,17 @@ Arguments can be seperated into:
 - None
 - Specific arguments (Such as -e, --example-argument, etc)
 
-| Name               | Function                                                   | Arguments                    | Dependencies             |
-| -                  | -                                                          | -                            | -                        |
-| bgman              | Manage background images using ``feh``                     | -l (Load)                    | feh                      |
-| brightness         | Control the display brightness via ``xrandr``              | None or floating point value | X (xrandr)               |
-| cheat              | Easily bring up a ``curl`` cheat sheet from cheat.sh       | I.M.                         | curl                     |
-| kblayout           | Manage keyboard layouts in ``X``                           | None                         | X (setxkbmap, localectl) |
-| lmmsProjectBooter  | Load projects from a specific directory into ``LMMS``      | -d (Debug mode)              | dmenu, lmms              |
-| nerdFontItemPicker | Return specific nerd font characters into `stdout`         | None                         | dmenu                    |
-| qrcodeterm         | Generate QR codes in the terminal                          | I.M.                         | curl                     |
-| wttrcode           | Read wetter information via ``curl`` using location codes  | None                         | curl, dmenu              |
-| wttrin             | Read wetter information via ``curl`` using input arguments | None or I.M.                 | curl                     |
+| Name               | Function                                                    | Arguments                    | Dependencies             |
+| -                  | -                                                           | -                            | -                        |
+| bgman              | Manage background images using ``feh``                      | -l (Load)                    | feh                      |
+| brightness         | Control the display brightnes                             |s via ``xrandr``               | None or floating point value | X (xrandr)               |
+| cheat              | Easily bring up a ``curl`` ch                             |eat sheet from cheat.sh        | I.M.                         | curl                     |
+| kblayout           | Manage keyboard layouts in ``                             |X``                            | None                         | X (setxkbmap, localectl) |
+| lmmsProjectBooter  | Load projects from a specific                             | directory into ``LMMS``       | -d (Debug mode)              | dmenu, lmms              |
+| nerdFontItemPicker | Return specific nerd font characters into `stdout`          | None                         | dmenu                    |
+| qrcodeterm         | Generate QR codes in the terminal                           | I.M.                         | curl                     |
+| wtrcode            | Read weather information via ``curl`` using location codes  | None                         | curl, dmenu              |
+| wtrin              | Read weather information via ``curl`` using input arguments | None or I.M.                 | curl                     |
 
 ## Requirements
 
@@ -40,6 +40,22 @@ This projects depends on the following binaries:
 - [dmenu](https://tools.suckless.org/dmenu/), used for any list in the repo, another alternative is [fzf](https://github.com/junegunn/fzf)
 - [curl](https://curl.se/), used for accessing terminal-friendly web pages
 - [feh](https://github.com/derf/feh), used by ``bgman`` for loading background images
+
+## Configuration
+
+You can configure the scripts that have configuration files via
+```sh
+$HOME/.config/bash-scripts/
+```
+
+Scripts that use configuration files are listed below:
+
+| Script             | Reason                    | Should it be manually edited? |
+| -                  | -                         | -                             |
+| bgman              | Picutre location and mode | ✖                             |
+| kblayout           | Favorite layouts          | ✓                             |
+| nerdFontItemPicker | Nerd font characters      | ✓                             |
+| wtrcode            | Weather codes             | ✓                             |
 
 ## Thanks
 

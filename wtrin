@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Name:        wttrin
+# Name:        wtrin
 # Author:      Petar Katić (bratpeki)
-# Description: Read wetter information via curl using a custom location argument
+# Description: Read weather information via curl using a custom location argument
 # Arguments:   None or infinitely many
 
 if [ $# -eq 0 ]; then

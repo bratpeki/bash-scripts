@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Name:        wtrcode
+# Author:      Petar Katić (bratpeki)
+# Description: Read weather information via curl using location codes
+
+locationOfFile="$HOME/.config/bash-scripts/wtrcode"
+
+if test -f "$locationOfFile"; then
+	dmenu -i -l 25 < "$locationOfFile" -fn "monospace:bold:pixelsize=16" | xargs -I {} curl wttr.in/{}
+else
+	printf "tokyo\ndelhi\nshanghai\nsao-paulo\nmexico-city\ndhaka\ncairo\nbeijing\nmumbai\nosaka\nkarachi\nchongqing\nistanbul\nbuenos-aires\nkolkata\nkinshasa\nlagos" > "$locationOfFile"
+	wtrcode
+fi

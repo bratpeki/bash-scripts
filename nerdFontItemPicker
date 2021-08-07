@@ -4,9 +4,11 @@
 # Author:      Petar Katić (bratpeki)
 # Description: Return specific nerd font characters into stdout
 
-locationOfFile=$(which nerdFontItemPicker)
-# This command relies on the fact that the
-# script path is added to the PATH variable
-locationOfFile=${locationOfFile%nerdFontItemPicker}deps/nerdFontItemPicker
+locationOfFile="$HOME/.config/bash-scripts/nerdFontItemPicker"
 
-dmenu -l 25 -fn "monospace:bold:pixelsize=16" < "$locationOfFile" | awk '{print $2}'
+if test -f "$locationOfFile"; then
+	dmenu -l 25 -fn "monospace:bold:pixelsize=16" < "$locationOfFile" | awk '{print $2}'
+else
+	printf "arrows:alldirections  \narrows:horizontal     \narrows:long-down      \narrows:long-left      \narrows:long-right     \narrows:long-up        \narrows:vertical       \ncode:android          \ncode:c                \ncode:c++/cpp          \ncode:python           \ncode:vim              \ncode:vistal-studio    \ndistro:arch           \ndistro:manjaro        \ngames:steam1          \ngames:steam2          戮\ngames:steam3          \nos:linux              \npc:file               \npc:folder             \npc:laptop-off         ﯥ\npc:laptop-on          \npc:trash              \nrandom:barcode        \nrandom:bitcoin        \nrandom:bluetooth      \nrandom:clean          \nrandom:handshake      \nrandom:heart          \nrandom:home           \nrandom:real-heart     \nrandom:robot-head     ﮧ\nweb:reddit            " > "$locationOfFile"
+	nerdFontItemPicker
+fi
