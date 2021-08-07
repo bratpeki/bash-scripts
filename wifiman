@@ -4,14 +4,14 @@
 # Author:      Petar Katić (bratpeki)
 # Description: nmcli-based wireless connection manager
 
-notify-send "wifiman" "Getting networks..." -t 3000
+echo "Getting networks..."
 nmcliAll="$(nmcli dev wifi)"
 nmcliLines="$(echo "$nmcliAll" | wc -l)"
 
 networkRaw="$(echo "$nmcliAll" | tail -n $(($nmcliLines - 1)) | dmenu -p "Network:" -l 25)"
 
 if [ -z "$networkRaw" ]; then
-	notify-send "wifiman" "No selection, exiting..." -t 3000
+	echo "No selection, exiting..."
 	exit
 fi
 

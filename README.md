@@ -2,24 +2,17 @@
 
 ## Current list:
 
-The list below shows the scripts present in the repo, a short description and possible arguments.
-Arguments can be seperated into:
-
-- I.M. (Infinitely many, the user can pass as many arguments which are then individually processed or concatanated)
-- None
-- Specific arguments (Such as -e, --example-argument, etc)
-
-| Name               | Function                                                    | Arguments                    | Dependencies             |
-| -                  | -                                                           | -                            | -                        |
-| bgman              | Manage background images using ``feh``                      | -l (Load)                    | feh                      |
-| brightness         | Control the display brightnes                             |s via ``xrandr``               | None or floating point value | X (xrandr)               |
-| cheat              | Easily bring up a ``curl`` ch                             |eat sheet from cheat.sh        | I.M.                         | curl                     |
-| kblayout           | Manage keyboard layouts in ``                             |X``                            | None                         | X (setxkbmap, localectl) |
-| lmmsProjectBooter  | Load projects from a specific                             | directory into ``LMMS``       | -d (Debug mode)              | dmenu, lmms              |
-| nerdFontItemPicker | Return specific nerd font characters into `stdout`          | None                         | dmenu                    |
-| qrcodeterm         | Generate QR codes in the terminal                           | I.M.                         | curl                     |
-| wtrcode            | Read weather information via ``curl`` using location codes  | None                         | curl, dmenu              |
-| wtrin              | Read weather information via ``curl`` using input arguments | None or I.M.                 | curl                     |
+| Name               | Function                                                    | Dependencies             |
+| -                  | -                                                           | -                        |
+| bgman              | Manage background images using ``feh``                      | feh                      |
+| brightness         | Control the display brightness via ``xrandr``               | X (xrandr)               |
+| cheat              | Easily bring up a ``curl`` cheat sheet from cheat.sh        | curl                     |
+| kblayout           | Manage keyboard layouts in ``X``                            | X (setxkbmap, localectl) |
+| lmmsProjectBooter  | Load projects from a specific directory into ``LMMS``       | dmenu, lmms              |
+| nerdFontItemPicker | Return specific nerd font characters into `stdout`          | dmenu                    |
+| qrcodeterm         | Generate QR codes in the terminal                           | curl                     |
+| wtrcode            | Read weather information via ``curl`` using location codes  | curl, dmenu              |
+| wtrin              | Read weather information via ``curl`` using input arguments | curl                     |
 
 ## Requirements
 
