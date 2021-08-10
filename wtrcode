@@ -5,11 +5,11 @@
 # Type:        terminal out, dmenu
 # Description: Read weather information via curl using location codes
 
-locationOfFile="$HOME/.config/bash-scripts/wtrcode"
+locationOfCfg="$HOME/.config/bash-scripts/wtrcode"
 
-if test -f "$locationOfFile"; then
-	dmenu -i -l 25 < "$locationOfFile" -fn "monospace:bold:pixelsize=16" | xargs -I {} curl wttr.in/{}
+if test -f "$locationOfCfg"; then
+	dmenu -i -l 25 < "$locationOfCfg" -fn "monospace:bold:pixelsize=16" | xargs -I {} curl wttr.in/{}
 else
-	printf "tokyo\ndelhi\nshanghai\nsao-paulo\nmexico-city\ndhaka\ncairo\nbeijing\nmumbai\nosaka\nkarachi\nchongqing\nistanbul\nbuenos-aires\nkolkata\nkinshasa\nlagos" > "$locationOfFile"
+	printf "tokyo\ndelhi\nshanghai\nsao-paulo\nmexico-city\ndhaka\ncairo\nbeijing\nmumbai\nosaka\nkarachi\nchongqing\nistanbul\nbuenos-aires\nkolkata\nkinshasa\nlagos" > "$locationOfCfg"
 	wtrcode
 fi

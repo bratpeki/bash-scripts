@@ -12,12 +12,15 @@
 # Arguments:
 #              -l (Load - Load your saved configuration)
 
-locationOfFile="$HOME/.config/bash-scripts/bgman"
+locationOfCfg="$HOME/.config/bash-scripts/bgman"
 
 if [ "$1" == "-l" ] || [ "$1" == "-L" ]; then
-	feh --bg-$(sed '2q;d' "$locationOfFile") "$(sed '1q;d' "$locationOfFile")"
+	feh --bg-$(sed '2q;d' "$locationOfCfg") "$(sed '1q;d' "$locationOfCfg")"
 else
-	pictureLocation="/home/peki/Pictures/wg/" # This location is meant to be manually edited
+
+	# Edit this location with the place you want to recursively search for the images in
+	pictureLocation="/home/peki/Pictures/wg/"
+
 	pictureLocation="$(find $pictureLocation -type f | dmenu -p "Picture: " -i -l 25 -fn "monospace:bold:pixelsize=16")"
 	pictureMode="$(printf "center\nfill\nmax\nscale\ntile" | dmenu -p "Mode: " -i -l 25 -fn "monospace:bold:pixelsize=16")"
 
@@ -27,11 +30,11 @@ else
 
 	feh --bg-$pictureMode "$pictureLocation"
 
-	if test -f "$locationOfFile"; then
-		rm "$locationOfFile"
+	if test -f "$locationOfCfg"; then
+		rm "$locationOfCfg"
 	fi
 
-	touch "$locationOfFile"
-	printf "$pictureLocation\n$pictureMode" > "$locationOfFile"
+	touch "$locationOfCfg"
+	printf "$pictureLocation\n$pictureMode" > "$locationOfCfg"
 
 fi

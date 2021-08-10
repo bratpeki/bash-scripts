@@ -9,11 +9,11 @@
 #              -f ( Favorites - List favorites from a file)
 # Example:     None provided, script uses graphical tool(s)
 
-locationOfFile="$HOME/.config/bash-scripts/kblayout"
+locationOfCfg="$HOME/.config/bash-scripts/kblayout"
 
-if test -f "$locationOfFile"; then
+if test -f "$locationOfCfg"; then
 	if [ "$1" == "-f" ] || [ "$1" == "-F" ]; then
-		sel="$(dmenu -i -l 25 -fn "monospace:bold:pixelsize=16" < "$locationOfFile")"
+		sel="$(dmenu -i -l 25 -fn "monospace:bold:pixelsize=16" < "$locationOfCfg")"
 	else
 		sel="$(localectl list-x11-keymap-layouts | dmenu -i -l 25 -fn "monospace:bold:pixelsize=16")"
 	fi
@@ -21,7 +21,6 @@ if test -f "$locationOfFile"; then
 		setxkbmap "$sel"
 	fi
 else
-	printf "de\ngb\nrs" > "$locationOfFile"
+	printf "de\ngb\nrs" > "$locationOfCfg"
 	kblayout
 fi
-

@@ -11,11 +11,11 @@
 #
 # Example:     None provided, script uses graphical tool(s)
 
-locationOfFile="$HOME/.config/bash-scripts/nerdFontItemPicker"
+locationOfCfg="$HOME/.config/bash-scripts/nerdFontItemPicker"
 
-if test -f "$locationOfFile"; then
-	dmenu -l 25 -fn "monospace:bold:pixelsize=16" < "$locationOfFile" | awk '{print $2}'
+if test -f "$locationOfCfg"; then
+	dmenu -l 25 -fn "monospace:bold:pixelsize=16" < "$locationOfCfg" | awk '{print $2}'
 else
-	printf "arrows:alldirections  \narrows:horizontal     \narrows:long-down      \narrows:long-left      \narrows:long-right     \narrows:long-up        \narrows:vertical       \ncode:android          \ncode:c                \ncode:c++/cpp          \ncode:python           \ncode:vim              \ncode:vistal-studio    \ndistro:arch           \ndistro:manjaro        \ngames:steam1          \ngames:steam2          戮\ngames:steam3          \nos:linux              \npc:file               \npc:folder             \npc:laptop-off         ﯥ\npc:laptop-on          \npc:trash              \nrandom:barcode        \nrandom:bitcoin        \nrandom:bluetooth      \nrandom:clean          \nrandom:handshake      \nrandom:heart          \nrandom:home           \nrandom:real-heart     \nrandom:robot-head     ﮧ\nweb:reddit            " > "$locationOfFile"
+	printf "arrows:alldirections  \narrows:horizontal     \narrows:long-down      \narrows:long-left      \narrows:long-right     \narrows:long-up        \narrows:vertical       \ncode:android          \ncode:c                \ncode:c++/cpp          \ncode:python           \ncode:vim              \ncode:vistal-studio    \ndistro:arch           \ndistro:manjaro        \ngames:steam1          \ngames:steam2          戮\ngames:steam3          \nos:linux              \npc:file               \npc:folder             \npc:laptop-off         ﯥ\npc:laptop-on          \npc:trash              \nrandom:barcode        \nrandom:bitcoin        \nrandom:bluetooth      \nrandom:clean          \nrandom:handshake      \nrandom:heart          \nrandom:home           \nrandom:real-heart     \nrandom:robot-head     ﮧ\nweb:reddit            " > "$locationOfCfg"
 	nerdFontItemPicker
 fi

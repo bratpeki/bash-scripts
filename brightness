@@ -27,4 +27,3 @@ fi
 if [ "$(echo "$(echo "$a"'>'"0.05" | bc -l) $(echo "$a"'<='"1" | bc -l)")" == "1 1" ]; then
 	xrandr --output "$display" --brightness "$a"
 fi
-
