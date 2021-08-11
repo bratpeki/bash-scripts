@@ -8,8 +8,12 @@
 #              Otherwise, "$EXPLORER" should just be replaced with some explorer of choice
 # Example:     None provided, script uses graphical tool(s)
 
+# "-type d" is not necessary if the explorer of choice doubles as an editor
+# excluding paths can preferrably be done by using "!/-not -path "*word-in-your-path*""
+findCommand="find $HOME -maxdepth 5 -type d"
+
 echo "Getting directories..."
-directory="$(find ~ -type d | dmenu -i -l 25)"
+directory="$($findCommand | dmenu -i -l 25)"
 
 if [ -z "$directory" ]; then
 	echo "No selection, exiting..."
