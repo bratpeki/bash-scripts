@@ -10,4 +10,9 @@
 
 echo "Getting directories..."
 directory="$(find ~ -type d | dmenu -i -l 25)"
-$EXPLORER "$directory"
+
+if [ -z "$directory" ]; then
+	echo "No selection, exiting..."
+else
+	$EXPLORER "$directory"
+fi

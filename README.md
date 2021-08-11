@@ -2,18 +2,19 @@
 
 ## Current list:
 
-| Name               | Function                                                    | Dependencies             | Type                 |
-| -                  | -                                                           | -                        | -                    |
-| bgman              | Manage background images using ``feh``                      | feh                      | dmenu                |
-| brightness         | Control the display brightness via ``xrandr``               | X (xrandr)               | terminal             |
-| cheat              | Easily bring up a ``curl`` cheat sheet from cheat.sh        | curl                     | terminal             |
-| kblayout           | Manage keyboard layouts in ``X``                            | X (setxkbmap, localectl) | terminal args, dmenu |
-| lmmsProjectBooter  | Load projects from a specific directory into ``LMMS``       | dmenu, lmms              | terminal args, dmenu |
-| nerdFontItemPicker | Return specific nerd font characters into `stdout`          | dmenu                    | terminal out, dmenu  |
-| qrcodeterm         | Generate QR codes in the terminal                           | curl                     | terminal             |
-| wifiman            | ``nmcli``-based wireless connection manager                 | nmcli                    | terminal in, dmenu   |
-| wtrcode            | Read weather information via ``curl`` using location codes  | curl, dmenu              | terminal out, dmenu  |
-| wtrin              | Read weather information via ``curl`` using input arguments | curl                     | terminal             |
+| Name               | Function                                                  | Dependencies                 | Type                 |
+| -                  | -                                                         | -                            | -                    |
+| bgman              | Manage background images using `feh`                      | `feh`                        | dmenu                |
+| brightness         | Control the display brightness via `xrandr`               | X (`xrandr`)                 | terminal             |
+| cheat              | Easily bring up a `curl` cheat sheet from cheat.sh        | `curl`                       | terminal             |
+| goto               | Quickly access directories                                | Any explorer                 | dmenu, terminal out  |
+| kblayout           | Manage keyboard layouts in `X`                            | X (`setxkbmap`, `localectl`) | terminal args, dmenu |
+| lmmsProjectBooter  | Load projects from a specific directory into `LMMS`       | `dmenu`, `lmms`              | terminal args, dmenu |
+| nerdFontItemPicker | Return specific nerd font characters into `stdout`        | `dmenu`                      | terminal out, dmenu  |
+| qrcodeterm         | Generate QR codes in the terminal                         | `curl`                       | terminal             |
+| wifiman            | `nmcli`-based wireless connection manager                 | `nmcli`                      | terminal in, dmenu   |
+| wtrcode            | Read weather information via `curl` using location codes  | `curl`, `dmenu`              | terminal out, dmenu  |
+| wtrin              | Read weather information via `curl` using input arguments | `curl`                       | terminal             |
 
 ## Requirements
 
