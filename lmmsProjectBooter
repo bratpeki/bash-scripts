@@ -11,10 +11,10 @@
 currDir="$(pwd)"
 cd "$HOME"/Documents/lmms/projects || exit
 
-fileInQuestion=$(find . -name "*.mmpz" | dmenu -i -l 25 -fn "monospace:bold:pixelsize=16")
+fileInQuestion="$(find . -name "*.mmpz" | dmenu -i -l 25)"
 
 if [ -z "$fileInQuestion" ]; then
-	notify-send "lmmsProjectBooter" "No selection, exiting..." -t 3000
+	notify-send "lmmsProjectBooter" "No selection, exiting..."
 else
 	echo Opening \""$fileInQuestion"...\"
 	if [ "$1" == "-d" ] || [ "$1" == "-D" ]; then

@@ -21,8 +21,8 @@ else
 	# Edit this location with the place you want to recursively search for the images in
 	pictureLocation="/home/peki/Pictures/wg/"
 
-	pictureLocation="$(find $pictureLocation -type f | dmenu -p "Picture: " -i -l 25 -fn "monospace:bold:pixelsize=16")"
-	pictureMode="$(printf "center\nfill\nmax\nscale\ntile" | dmenu -p "Mode: " -i -l 25 -fn "monospace:bold:pixelsize=16")"
+	pictureLocation="$(find $pictureLocation -type f | dmenu -p "Picture: " -i -l 25)"
+	pictureMode="$(printf "center\nfill\nmax\nscale\ntile" | dmenu -p "Mode: " -i -l 25)"
 
 	if [ -z "$pictureLocation" ] || [ -z "$pictureMode" ]; then
 		exit

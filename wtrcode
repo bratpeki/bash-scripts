@@ -8,7 +8,7 @@
 locationOfCfg="$HOME/.config/bash-scripts/wtrcode"
 
 if test -f "$locationOfCfg"; then
-	dmenu -i -l 25 < "$locationOfCfg" -fn "monospace:bold:pixelsize=16" | xargs -I {} curl wttr.in/{}
+	dmenu -i -l 25 < "$locationOfCfg" | xargs -I {} curl wttr.in/{}
 else
 	printf "tokyo\ndelhi\nshanghai\nsao-paulo\nmexico-city\ndhaka\ncairo\nbeijing\nmumbai\nosaka\nkarachi\nchongqing\nistanbul\nbuenos-aires\nkolkata\nkinshasa\nlagos" > "$locationOfCfg"
 	wtrcode

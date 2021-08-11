@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Name:        goto
+# Author:      Petar Katić (bratpeki)
+# Type:        terminal out, dmenu
+# Description: Quickly access direcoties
+#              The user has to define an EXPLORER variable (vifm, ranger, nnn, vim, dolphin ...)
+#              Otherwise, "$EXPLORER" should just be replaced with some explorer of choice
+# Example:     None provided, script uses graphical tool(s)
+
+echo "Getting directories..."
+directory="$(find ~ -type d | dmenu -i -l 25)"
+$EXPLORER "$directory"

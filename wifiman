@@ -5,7 +5,7 @@
 # Type:        terminal in, dmenu
 # Description: nmcli-based wireless connection manager
 
-opt="$(printf "Enable/Disable WiFi ("$(nmcli radio wifi)")\nConnect" | dmenu -p "Options:" -l 25)"
+opt="$(printf "Enable/Disable WiFi ("$(nmcli radio wifi)")\nConnect" | dmenu -p "Options:" -i -l 25)"
 
 case "$opt" in
 	"Enable/Disable WiFi (enabled)")
@@ -21,7 +21,7 @@ case "$opt" in
 		nmcliAll="$(nmcli dev wifi)"
 		nmcliLines="$(echo "$nmcliAll" | wc -l)"
 
-		networkRaw="$(echo "$nmcliAll" | tail -n $(($nmcliLines - 1)) | dmenu -p "Network:" -l 25)"
+		networkRaw="$(echo "$nmcliAll" | tail -n $(($nmcliLines - 1)) | dmenu -p "Network:" -i -l 25)"
 
 		if [ -z "$networkRaw" ]; then
 			echo "No selection, exiting..."

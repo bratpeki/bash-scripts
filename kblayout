@@ -13,9 +13,9 @@ locationOfCfg="$HOME/.config/bash-scripts/kblayout"
 
 if test -f "$locationOfCfg"; then
 	if [ "$1" == "-f" ] || [ "$1" == "-F" ]; then
-		sel="$(dmenu -i -l 25 -fn "monospace:bold:pixelsize=16" < "$locationOfCfg")"
+		sel="$(dmenu -i -l 25 < "$locationOfCfg")"
 	else
-		sel="$(localectl list-x11-keymap-layouts | dmenu -i -l 25 -fn "monospace:bold:pixelsize=16")"
+		sel="$(localectl list-x11-keymap-layouts | dmenu -i -l 25)"
 	fi
 	if [ ! -z "$sel" ]; then
 		setxkbmap "$sel"
