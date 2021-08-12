@@ -15,7 +15,7 @@ case "$btState" in
 	"off") btState="disabled";;
 esac
 
-opt="$(printf "BlueTooth - Enable/Disable ("$btState")\nWiFi - Enable/Disable ("$(nmcli radio wifi)")\nWiFi - Connect WiFi" | dmenu -p "Options:" -i -l 25)"
+opt="$(printf "BlueTooth - Enable/Disable ("$btState")\nWiFi - Enable/Disable ("$(nmcli radio wifi)")\nWiFi - Connect" | dmenu -p "Options:" -i -l 25)"
 
 case "$opt" in
 	"Bluetooth - Enable/Disable ($btState)")
