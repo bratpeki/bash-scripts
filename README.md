@@ -12,7 +12,7 @@
 | lmmsProjectBooter  | Load projects from a specific directory into `LMMS`       | `dmenu`, `lmms`              | terminal args, dmenu |
 | nerdFontItemPicker | Return specific nerd font characters into `stdout`        | `dmenu`                      | terminal out, dmenu  |
 | qrcodeterm         | Generate QR codes in the terminal                         | `curl`                       | terminal             |
-| wifiman            | `nmcli`-based wireless connection manager                 | `nmcli`                      | terminal in, dmenu   |
+| connman            | `bluetooth` and `nmcli`-based wireless connection manager | `bluetooth`, `nmcli`         | terminal in, dmenu   |
 | wtrcode            | Read weather information via `curl` using location codes  | `curl`, `dmenu`              | terminal out, dmenu  |
 | wtrin              | Read weather information via `curl` using input arguments | `curl`                       | terminal             |
 

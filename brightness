@@ -7,23 +7,30 @@
 #              The "display" variable will contain the display whose brightness
 #              will be edited, if you have multiple desktops you could set up a
 #              dmenu prompt to choose the screen you affect
-# Arguments:   None or floating point value between 0 and 1
+#              By default, the user is limited between 0.05 and 1
+# Arguments:   -a (All - Alows for any number input)
 # Example:
 #
 #     $ brightness
 #     Insert desired brightness [0-1]: 0.8
 #
-#     $ brightness 0.8
 
+
+# Insert the name of your display here
+# To do that, find which screen is connected using "xrandr -q"
 display="eDP1"
 
-if [ -z "$1" ]; then
-	printf "Insert desired brightness [0-1]: "
+if [ "$1" == "-a" ]; then
+	printf "Insert desired brightness: "
 	read a
 else
-	a="$1"
+	printf "Insert desired brightness [0-1]: "
+	read a
+
+	if [ "$(echo "$a"'<'"0.05" | bc -l)" == "1" ] || [ "$(echo "$a"'>'"1" | bc -l)" == "1" ]; then
+		exit
+	fi
+
 fi
 
-if [ "$(echo "$(echo "$a"'>'"0.05" | bc -l) $(echo "$a"'<='"1" | bc -l)")" == "1 1" ]; then
-	xrandr --output "$display" --brightness "$a"
-fi
+xrandr --output "$display" --brightness "$a"

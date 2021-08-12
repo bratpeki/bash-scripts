@@ -1,22 +1,35 @@
 #!/bin/bash
 
-# Name:        wifiman
+# Name:        connman
 # Author:      Petar Katić (bratpeki)
 # Type:        terminal in, dmenu
-# Description: nmcli-based wireless connection manager
+# Description: bluetooth and nmcli-based wireless connection manager
+# Example:     None provided, script uses graphical tool(s)
 
-opt="$(printf "Enable/Disable WiFi ("$(nmcli radio wifi)")\nConnect" | dmenu -p "Options:" -i -l 25)"
+btState="$(bluetooth | awk '{ print $3 }')"
+
+# For the sake of universality, I'll have everything use "enabled" and "disabled" rather
+# than something using "on" and "off"
+case "$btState" in
+	"on") btState="enabled";;
+	"off") btState="disabled";;
+esac
+
+opt="$(printf "BlueTooth - Enable/Disable ("$btState")\nWiFi - Enable/Disable ("$(nmcli radio wifi)")\nWiFi - Connect WiFi" | dmenu -p "Options:" -i -l 25)"
 
 case "$opt" in
-	"Enable/Disable WiFi (enabled)")
+	"Bluetooth - Enable/Disable ($btState)")
+		bluetooth toggle
+		;;
+	"WiFi - Enable/Disable (enabled)")
 		nmcli radio wifi off
 		notify-send "wifiman" "WiFi Disabled"
 		;;
-	"Enable/Disable WiFi (disabled)")
+	"WiFi - Enable/Disable (disabled)")
 		nmcli radio wifi on
 		notify-send "wifiman" "WiFi Enabled"
 		;;
-	"Connect")
+	"WiFi - Connect")
 		echo "Getting networks..."
 		nmcliAll="$(nmcli dev wifi)"
 		nmcliLines="$(echo "$nmcliAll" | wc -l)"
