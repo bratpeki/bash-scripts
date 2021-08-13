@@ -35,7 +35,7 @@ This projects depends on the following binaries:
 - [curl](https://curl.se/), used for accessing terminal-friendly web pages
 - [dmenu](https://tools.suckless.org/dmenu/), used for any list in the repo, another alternative is [fzf](https://github.com/junegunn/fzf)
 - [feh](https://github.com/derf/feh), used by ``bgman`` for loading background images
-- [nmcli](https://linux.die.net/man/1/nmcli), used by ``wifiman`` for getting nearby networks
+- [nmcli](https://linux.die.net/man/1/nmcli), used by ``wifiman`` for managing Bluetooth and WiFi activity
 
 ## Configuration
 
@@ -46,12 +46,13 @@ $HOME/.config/bash-scripts/
 
 Scripts that use configuration files are listed below:
 
-| Script             | Intended use              | Should it be manually edited? |
-| -                  | -                         | -                             |
-| bgman              | Picutre location and mode | ☒                             |
-| kblayout           | Favorite layouts          | ☑                             |
-| nerdFontItemPicker | Nerd font characters      | ☑                             |
-| wtrcode            | Weather codes             | ☑                             |
+| Script             | Intended use               | Should it be manually edited? |
+| -                  | -                          | -                             |
+| bgman              | Picutre location and mode  | ☒                             |
+| brightness         | Display you want to affect | ☑                             |
+| kblayout           | Favorite layouts           | ☑                             |
+| nerdFontItemPicker | Nerd font characters       | ☑                             |
+| wtrcode            | Weather codes              | ☑                             |
 
 ## Thanks
 

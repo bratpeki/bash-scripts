@@ -4,33 +4,53 @@
 # Author:      Petar Katić (bratpeki)
 # Type:        terminal
 # Description: Control the screen brightness via ``xrandr``
-#              The "display" variable will contain the display whose brightness
-#              will be edited, if you have multiple desktops you could set up a
-#              dmenu prompt to choose the screen you affect
+#              If the config file is not defined, the script takes
+#              the first connected (and thus, most commonly primary)
+#              display as default, you can change it if you so please
 #              By default, the user is limited between 0.05 and 1
-# Arguments:   -a (All - Alows for any number input)
+# Arguments:
+#              -a (All - Alows for any number input)
 # Example:
 #
 #     $ brightness
-#     Insert desired brightness [0-1]: 0.8
+#     Insert desired brightness [0-1]: 0.8 (brightness adjusted)
+#
+#     $ brightness 2 (no change)
+#
+#     $ brightness -a 2 (brightness adjusted)
 #
 
+locationOfCfg="$HOME/.config/bash-scripts/brightness"
 
-# Insert the name of your display here
-# To do that, find which screen is connected using "xrandr -q"
-display="eDP1"
+if test -f "$locationOfCfg"; then
 
-if [ "$1" == "-a" ]; then
-	printf "Insert desired brightness: "
-	read a
-else
-	printf "Insert desired brightness [0-1]: "
-	read a
+	allVals=0
 
-	if [ "$(echo "$a"'<'"0.05" | bc -l)" == "1" ] || [ "$(echo "$a"'>'"1" | bc -l)" == "1" ]; then
-		exit
+	for i in "$@"; do
+
+		case $i in
+			-a|-A) allVals=1;;
+			*) brVal="$i";;
+		esac
+
+	done
+
+	if [ -z "$brVal" ]; then
+		printf "Insert desired brightness: "
+		read brVal
 	fi
 
-fi
+	if [ "$allVals" == "0" ]; then
+		if [ "$(echo "$brVal"'<'"0.05" | bc -l)" == "1" ] || [ "$(echo "$brVal"'>'"1" | bc -l)" == "1" ]; then
+			exit
+		fi
+	fi
 
-xrandr --output "$display" --brightness "$a"
+	xrandr --output "$(cat "$locationOfCfg")" --brightness "$brVal"
+
+else
+
+	echo "$(xrandr -q | grep "connected " | head -n 1 | awk '{ print $1 }')" > "$locationOfCfg"
+	brightness
+
+fi
