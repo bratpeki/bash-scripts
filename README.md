@@ -48,11 +48,11 @@ Scripts that use configuration files are listed below:
 
 | Script             | Intended use               | Should it be manually edited? |
 | -                  | -                          | -                             |
-| bgman              | Picutre location and mode  | ☒                             |
-| brightness         | Display you want to affect | ☑                             |
-| kblayout           | Favorite layouts           | ☑                             |
-| nerdFontItemPicker | Nerd font characters       | ☑                             |
-| wtrcode            | Weather codes              | ☑                             |
+| bgman              | Picutre location and mode  | ❌                            |
+| brightness         | Display you want to affect | ✔️                             |
+| kblayout           | Favorite layouts           | ✔️                             |
+| nerdFontItemPicker | Nerd font characters       | ✔️                             |
+| wtrcode            | Weather codes              | ✔️                             |
 
 ## Thanks
 
