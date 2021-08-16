@@ -23,11 +23,11 @@ case "$opt" in
 		;;
 	"WiFi - Enable/Disable (enabled)")
 		nmcli radio wifi off
-		notify-send "wifiman" "WiFi Disabled"
+		notify-send "connman" "WiFi Disabled"
 		;;
 	"WiFi - Enable/Disable (disabled)")
 		nmcli radio wifi on
-		notify-send "wifiman" "WiFi Enabled"
+		notify-send "connman" "WiFi Enabled"
 		;;
 	"WiFi - Connect")
 		echo "Getting networks..."
