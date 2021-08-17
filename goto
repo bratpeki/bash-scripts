@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Name:        openwith
+# Name:        goto
 # Author:      Petar Katić (bratpeki)
 # Type:        terminal out, dmenu
 # Description: Quickly open direcoties
 #              You first select the directory and then the programToRun
-#              If you don't select a directory, openwith exits
-#              If you don't select a program, openwith opens the direcory
+#              If you don't select a directory, goto exits
+#              If you don't select a program, goto opens the direcory
 #              with the first program in the config
 #              Here, I'm taking "st" into account and running "st -e ...", since
 #              that is how a new "st" instance starts with a given command
@@ -14,7 +14,7 @@
 #              -l ( Local execution - Execute command from current shell )
 # Example:     None provided, script uses graphical tool(s)
 
-locationOfCfg="$HOME/.config/bash-scripts/openwith"
+locationOfCfg="$HOME/.config/bash-scripts/goto"
 
 if test -f "$locationOfCfg"; then
 
@@ -38,7 +38,7 @@ if test -f "$locationOfCfg"; then
 			"$programToRun" "$directory"
 		else
 			# Replace this with your browser of choice
-			# In Konsole: konsole -e bash -c "$pro" "$directory"
+			# In Konsole: konsole -e bash -c "$programToRun" "$directory"
 			# In GNOME Terminal: gnome-terminal -- bash -c ""$programToRun" "$directory"; exec bash"
 			st -e "$programToRun" "$directory"
 		fi
@@ -47,6 +47,6 @@ if test -f "$locationOfCfg"; then
 
 else
 	printf "vifm\nfeh\nmpv" > "$locationOfCfg"
-	openwith
+	goto
 fi
 
