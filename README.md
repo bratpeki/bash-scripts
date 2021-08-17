@@ -7,12 +7,12 @@
 | bgman              | Manage background images using `feh`                      | `feh`                        | dmenu                |
 | brightness         | Control the display brightness via `xrandr`               | X (`xrandr`)                 | terminal             |
 | cheat              | Easily bring up a `curl` cheat sheet from cheat.sh        | `curl`                       | terminal             |
-| goto               | Quickly access directories                                | Any explorer                 | dmenu, terminal out  |
+| connman            | `bluetooth` and `nmcli`-based wireless connection manager | `bluetooth`, `nmcli`         | terminal in, dmenu   |
 | kblayout           | Manage keyboard layouts in `X`                            | X (`setxkbmap`, `localectl`) | terminal args, dmenu |
 | lmmsProjectBooter  | Load projects from a specific directory into `LMMS`       | `dmenu`, `lmms`              | terminal args, dmenu |
 | nerdFontItemPicker | Return specific nerd font characters into `stdout`        | `dmenu`                      | terminal out, dmenu  |
+| openwith           | Quickly open directories                                  | Any programs                 | dmenu, terminal out  |
 | qrcodeterm         | Generate QR codes in the terminal                         | `curl`                       | terminal             |
-| connman            | `bluetooth` and `nmcli`-based wireless connection manager | `bluetooth`, `nmcli`         | terminal in, dmenu   |
 | wtrcode            | Read weather information via `curl` using location codes  | `curl`, `dmenu`              | terminal out, dmenu  |
 | wtrin              | Read weather information via `curl` using input arguments | `curl`                       | terminal             |
 
@@ -46,13 +46,14 @@ $HOME/.config/bash-scripts/
 
 Scripts that use configuration files are listed below:
 
-| Script             | Intended use               | Should it be manually edited? |
-| -                  | -                          | -                             |
-| bgman              | Picutre location and mode  | ❌                            |
-| brightness         | Display you want to affect | ✔️                             |
-| kblayout           | Favorite layouts           | ✔️                             |
-| nerdFontItemPicker | Nerd font characters       | ✔️                             |
-| wtrcode            | Weather codes              | ✔️                             |
+| Script             | Intended use                      | Should it be manually edited? |
+| -                  | -                                 | -                             |
+| bgman              | Picutre location and mode         | ❌                            |
+| brightness         | Display you want to affect        | ✔️                             |
+| kblayout           | Favorite layouts                  | ✔️                             |
+| nerdFontItemPicker | Nerd font characters              | ✔️                             |
+| openwith           | Programs to open directories with | ✔️                             |
+| wtrcode            | Weather codes                     | ✔️                             |
 
 ## Thanks
 
