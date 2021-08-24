@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Name:        ytmpv
+# Author:      Petar Katić (bratpeki)
+# Type:        external app, dmenu
+# Description: Stream YouTube videos via mpv
+#              You can pass the link as an argument or type/paste it
+#              If the link is not provided at the CLI argument position,
+#              the script stops immidietly
+# Arguments:
+#              -f ( Format ID - Select the format from YouTube's ID list )
+# Example:     None provided, script uses graphical tool(s)
+
+formatID=0
+ytLink=""
+while [ "$#" != "0" ]; do
+	if [ "$1" == "-f" ] || [ "$1" == "-F" ]; then
+		shift; formatID="$1"; shift
+	else
+		ytLink="$1"; shift
+	fi
+done
+
+if [ -z "$ytLink" ]; then exit; fi
+
+if [ "$formatID" == "0" ]; then
+	ytdlOut="$(youtube-dl -F "$ytLink")"
+	formatID="$(youtube-dl -F "$ytLink" | tail -n "$(( "$( echo "$ytdlOut" | wc -l )" - 3 ))" | dmenu -p "Format ID:" -i -l 25 | awk '{ print $1 }')"
+	if [ -z "$formatID" ]; then exit; fi
+fi
+
+mpv --ytdl-format=$formatID "$ytLink"
+

@@ -2,7 +2,7 @@
 
 # Name:        goto
 # Author:      Petar Katić (bratpeki)
-# Type:        terminal out, dmenu
+# Type:        terminal out (spawn/local), dmenu
 # Description: Quickly open direcoties
 #              You first select the directory and then the programToRun
 #              If you don't select a directory, goto exits

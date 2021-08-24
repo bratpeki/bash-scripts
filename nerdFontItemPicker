@@ -2,7 +2,7 @@
 
 # Name:        nerdFontItemPicker
 # Author:      Petar Katić (bratpeki)
-# Type:        terminal out, dmenu
+# Type:        terminal out (local), dmenu
 # Description: Return specific nerd font characters into stdout
 #              On an in important note, the way you apply a selected character
 #              to a variable is:

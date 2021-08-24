@@ -2,7 +2,7 @@
 
 # Name:        connman
 # Author:      Petar Katić (bratpeki)
-# Type:        terminal in, dmenu
+# Type:        terminal in (spawn), dmenu
 # Description: bluetooth and nmcli-based wireless connection manager
 # Example:     None provided, script uses graphical tool(s)
 
@@ -47,6 +47,6 @@ case "$opt" in
 			ssid="$(echo "$networkRaw" | awk -F "  " '{ print $6 }')"
 		fi
 
-		nmcli dev wifi connect "$ssid" --ask
+		st -e nmcli dev wifi connect "$ssid" --ask
 		;;
 esac

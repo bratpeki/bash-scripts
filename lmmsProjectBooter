@@ -2,7 +2,7 @@
 
 # Name:        lmmsProjectBooter
 # Author:      Petar Katić (bratpeki)
-# Type:        terminal args, dmenu
+# Type:        terminal args (local), dmenu
 # Description: Load projects from a specific directory into LMMS
 # Arguments:
 #              -d ( Debug mode - Get LMMS debug output )

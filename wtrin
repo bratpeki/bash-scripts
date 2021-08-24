@@ -2,7 +2,7 @@
 
 # Name:        wtrin
 # Author:      Petar Katić (bratpeki)
-# Type:        terminal
+# Type:        terminal (local)
 # Description: Read weather information via curl using a custom location argument
 # Arguments:   None or infinitely many
 
