@@ -7,7 +7,6 @@
 | bgman              | Manage background images using `feh`                      | `feh`                        | dmenu                             |
 | brightness         | Control the display brightness via `xrandr`               | X (`xrandr`)                 | terminal (local)                  |
 | cheat              | Easily bring up a `curl` cheat sheet from cheat.sh        | `curl`                       | terminal (local)                  |
-| connman            | `bluetooth` and `nmcli`-based wireless connection manager | `bluetooth`, `nmcli`         | terminal in (spawn), dmenu        |
 | goto               | Quickly open directories                                  | Any programs                 | terminal out (spawn/local), dmenu |
 | kblayout           | Manage keyboard layouts in `X`                            | X (`setxkbmap`, `localectl`) | terminal args (local), dmenu      |
 | lmmsProjectBooter  | Load projects from a specific directory into `LMMS`       | `dmenu`, `lmms`              | terminal args (local), dmenu      |
@@ -37,7 +36,6 @@ This projects depends on the following binaries:
 - [dmenu](https://tools.suckless.org/dmenu/), used for any list in the repo, another alternative is [fzf](https://github.com/junegunn/fzf)
 - [feh](https://github.com/derf/feh), used by ``bgman`` for loading background images
 - [mpv](https://mpv.io/), used by `ytmpv` to stream YouTube videos
-- [nmcli](https://linux.die.net/man/1/nmcli), used by ``wifiman`` for managing Bluetooth and WiFi activity
 - [youtube-dl](https://youtube-dl.org/), used for accessing YouTube metadata and video content
 
 ## Configuration
