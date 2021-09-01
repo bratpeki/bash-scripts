@@ -5,9 +5,9 @@
 # Type:        dmenu
 # Description: Manage background images using feh
 #              This script is intended to be used on WM's, since most, if
-#              not all modern DE's have their own background image tools.
+#              not all, modern DE's have their own background image tools.
 #              This one was made specifically for dwm.
-#              You should make sure "bgman -l" is ran on startup to ensure
+#              You should make sure "bgman -l" is run on startup to ensure
 #              that your image is applied
 # Arguments:
 #              -l (Load - Load your saved configuration)
