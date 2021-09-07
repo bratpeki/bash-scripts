@@ -19,7 +19,7 @@ if [ "$1" == "-l" ] || [ "$1" == "-L" ]; then
 else
 
 	# Edit this location with the place you want to recursively search for the images in
-	pictureLocation="/home/peki/Pictures/wg/"
+	pictureLocation="$HOME/Pictures/"
 
 	pictureLocation="$(find $pictureLocation -type f | dmenu -p "Picture: " -i -l 25)"
 	pictureMode="$(printf "center\nfill\nmax\nscale\ntile" | dmenu -p "Mode: " -i -l 25)"

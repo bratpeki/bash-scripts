@@ -35,18 +35,18 @@ if test -f "$locationOfCfg"; then
 		fi
 
 		if [ "$1" == "-l" ] || [ "$1" == "-L" ]; then
-			"$programToRun" "$directory"
+			$programToRun "$directory"
 		else
 			# Replace this with your browser of choice
 			# In Konsole: konsole -e bash -c "$programToRun" "$directory"
 			# In GNOME Terminal: gnome-terminal -- bash -c ""$programToRun" "$directory"; exec bash"
-			st -e "$programToRun" "$directory"
+			st -e $programToRun "$directory"
 		fi
 
 	fi
 
 else
-	printf "vifm\nfeh\nmpv" > "$locationOfCfg"
+	printf "vifm\nfeh\nfeh --recursive\nmpv" > "$locationOfCfg"
 	goto
 fi
 
