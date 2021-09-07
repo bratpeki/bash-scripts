@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Name:        screencap
+# Author:      Petar Katić (bratpeki)
+# Type:        dmenu, display
+# Description: Capture the screen using scrot
+# Example:     None provided, script uses graphical tools
+
+outLocation="screencap-%Y-%m-%d-%H-%M-%S.png"
+
+option=$(printf "1 - Entire screen\n2 - Selection\n3 - Current window" | dmenu -i -l 3 | awk '{ print $1 }')
+case $option in
+	1) scrot "$outLocation";;
+	2) scrot "$outLocation" -s;;
+	3) scrot "$outLocation" -u;;
+esac
