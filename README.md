@@ -12,10 +12,10 @@
 | lmmsProjectBooter  | Load projects from a specific directory into `LMMS`       | `dmenu`, `lmms`              | terminal args (local), dmenu      |
 | nerdFontItemPicker | Return specific nerd font characters into `stdout`        | `dmenu`                      | terminal out (local), dmenu       |
 | qrcodeterm         | Generate QR codes in the terminal                         | `curl`                       | terminal (local)                  |
+| screencap          | Capture the screen using `scrot`                          | `dmenu`, `scrot`             | dmenu, display                    |
 | wtrcode            | Read weather information via `curl` using location codes  | `curl`, `dmenu`              | terminal out (local), dmenu       |
 | wtrin              | Read weather information via `curl` using input arguments | `curl`                       | terminal (local)                  |
 | ytmpv              | Stream YouTube videos via `mpv` using `youtube-dl`        | `dmenu`, `mpv`, `youtube-dl` | external app, dmenu               |
-| screencap          | Capture the screen using `scrot`                          | `dmenu`, `scrot`             | dmenu, display                    |
 
 ## Requirements
 
