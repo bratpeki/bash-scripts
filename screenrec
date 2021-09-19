@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Name:        screenrec
+# Author:      Petar Katić (bratpeki)
+# Type:        terminal args (local), display
+# Description: Capture the screen and audio via ALSA and FFMPEG
+#              According to the Arch Wiki:
+#                  "ALSA is a set of built-in Linux kernel modules.
+#                  Therefore, manual installation is not necessary."
+# Arguments:
+#              -l ( Local mode - Run screenrec from the current terminal )
+# Example:     None provided, script uses graphical tools
+
+INRES="1600x900"
+OUTRES="1280x720"
+FPS="30"
+QUAL="fast"
+FILE_OUT="$(date +"screenrec-%d-%m-%Y-%H-%M-%S")"
+PULSE_IN="alsa_input.pci-0000_00_1b.0.analog-stereo"
+PULSE_OUT="alsa_output.pci-0000_00_1b.0.analog-stereo.monitor"
+
+if [ "$1" != "-l" ] && [ "$1" != "-L" ]; then
+	# This prefix creates a new instance of terminal of your choice
+	# You pass any terminal's instantiation
+	prefix="st -e"
+fi
+
+$prefix ffmpeg -f x11grab -s "$INRES" -r "$FPS" -i :0.0 \
+    -f pulse -i "$PULSE_IN" -f pulse -i "$PULSE_OUT" \
+    -filter_complex amerge \
+    -vcodec libx264 -crf 30 -preset "$QUAL" -s "$OUTRES" \
+    -acodec libmp3lame -ab 96k -ar 44100 -threads 4 -pix_fmt yuv420p \
+    -f flv "$FILE_OUT"

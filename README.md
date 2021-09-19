@@ -13,6 +13,7 @@
 | nerdFontItemPicker | Return specific nerd font characters into `stdout`        | `dmenu`                      | terminal out (local), dmenu       |
 | qrcodeterm         | Generate QR codes in the terminal                         | `curl`                       | terminal (local)                  |
 | screencap          | Capture the screen using `scrot`                          | `dmenu`, `scrot`             | dmenu, display                    |
+| screenrec          | Capture the screen and audio via `ALSA` and `FFMPEG`      | `ffmpeg`                     | terminal args (local), display    |
 | wtrcode            | Read weather information via `curl` using location codes  | `curl`, `dmenu`              | terminal out (local), dmenu       |
 | wtrin              | Read weather information via `curl` using input arguments | `curl`                       | terminal (local)                  |
 | ytmpv              | Stream YouTube videos via `mpv` using `youtube-dl`        | `dmenu`, `mpv`, `youtube-dl` | external app, dmenu               |
@@ -36,6 +37,7 @@ This projects depends on the following binaries:
 - [curl](https://curl.se/), used for accessing terminal-friendly web pages
 - [dmenu](https://tools.suckless.org/dmenu/), used for any list in the repo, another alternative is [fzf](https://github.com/junegunn/fzf)
 - [feh](https://github.com/derf/feh), used by ``bgman`` for loading background images
+- [ffmpeg](http://ffmpeg.org/), used for screen recording via `screenrec`
 - [mpv](https://mpv.io/), used by `ytmpv` to stream YouTube videos
 - [scrot](https://manpages.ubuntu.com/manpages/xenial/man1/scrot.1.html), used by `screencap` to capture the screen
 - [youtube-dl](https://youtube-dl.org/), used for accessing YouTube metadata and video content
