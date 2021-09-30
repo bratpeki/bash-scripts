@@ -4,9 +4,14 @@
 # Author:      Petar Katić (bratpeki)
 # Type:        dmenu, display
 # Description: Capture the screen using scrot
+# Arguments:   Any argument stored in $1 will define the output path
 # Example:     None provided, script uses graphical tools
 
-outLocation="screencap-%Y-%m-%d-%H-%M-%S.png"
+if [ -z "$1" ]; then
+	outLocation="screencap-%Y-%m-%d-%H-%M-%S.png"
+else
+	outLocation="$1"
+fi
 
 option=$(printf "1 - Entire screen\n2 - Selection\n3 - Current window" | dmenu -i -l 3 | awk '{ print $1 }')
 case $option in
