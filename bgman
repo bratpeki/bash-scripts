@@ -15,7 +15,7 @@
 locationOfCfg="$HOME/.config/bash-scripts/bgman"
 
 if [ "$1" == "-l" ] || [ "$1" == "-L" ]; then
-	feh --bg-$(sed '2q;d' "$locationOfCfg") "$(sed '1q;d' "$locationOfCfg")"
+	feh --bg-$(sed '1q;d' "$locationOfCfg") "$(sed '2q;d' "$locationOfCfg")"
 else
 
 	# Edit this location with the place you want to recursively search for the images in
@@ -35,6 +35,6 @@ else
 	fi
 
 	touch "$locationOfCfg"
-	printf "$pictureLocation\n$pictureMode" > "$locationOfCfg"
+	printf "$pictureMode\n$pictureLocation" > "$locationOfCfg"
 
 fi

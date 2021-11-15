@@ -17,7 +17,7 @@ if test -f "$locationOfCfg"; then
 	else
 		sel="$(localectl list-x11-keymap-layouts | dmenu -i -l 25)"
 	fi
-	if [ ! -z "$sel" ]; then setxkbmap "$sel"; fi
+	if [ -n "$sel" ]; then setxkbmap "$sel"; fi
 else
 	printf "de\ngb\nrs" > "$locationOfCfg"
 	kblayout
