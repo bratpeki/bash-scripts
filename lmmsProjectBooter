@@ -9,7 +9,7 @@
 # Example:     None provided, script uses graphical tool(s)
 
 currDir="$(pwd)"
-cd "$HOME"/Documents/lmms/projects || exit
+cd "$HOME"/Music/Prod/lmms/projects || exit
 
 fileInQuestion="$(find . -name "*.mmpz" | dmenu -i -l 25)"
 
