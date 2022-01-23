@@ -2,7 +2,6 @@
 
 # Name:        brightness
 # Author:      Petar Katić (bratpeki)
-# Type:        terminal (local)
 # Description: Control the screen brightness via ``xrandr``
 #              If the config file is not defined, the script takes
 #              the first connected (and thus, most commonly primary)

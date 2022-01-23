@@ -2,7 +2,6 @@
 
 # Name:        screencap
 # Author:      Petar Katić (bratpeki)
-# Type:        dmenu, display
 # Description: Capture the screen using scrot
 # Arguments:   Any argument stored in $1 will define the output path
 # Example:     None provided, script uses graphical tools

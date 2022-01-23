@@ -2,7 +2,6 @@
 
 # Name:        kblayout
 # Author:      Petar Katić (bratpeki)
-# Type:        terminal args (local), dmenu
 # Description: Manage keyboard layouts in X
 #              deps/kblayout is to be edited manually
 # Arguments:

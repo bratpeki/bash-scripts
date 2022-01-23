@@ -2,7 +2,6 @@
 
 # Name:        goto
 # Author:      Petar Katić (bratpeki)
-# Type:        terminal out (spawn/local), dmenu
 # Description: Quickly open direcoties
 #              You first select the directory and then the programToRun
 #              If you don't select a directory, goto exits
@@ -46,7 +45,7 @@ if test -f "$locationOfCfg"; then
 	fi
 
 else
-	printf "vifm\nfeh\nfeh --recursive\nmpv" > "$locationOfCfg"
+	printf "vifm\nfeh\nfeh -r\nmpv" > "$locationOfCfg"
 	goto
 fi
 

@@ -2,7 +2,6 @@
 
 # Name:        qrcodeterm
 # Author:      Petar Katić (bratpeki)
-# Type:        terminal (local)
 # Description: Generate QR codes in the terminal
 # Arguments:   Infinitely many
 # Example:

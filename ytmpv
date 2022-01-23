@@ -2,7 +2,6 @@
 
 # Name:        ytmpv
 # Author:      Petar Katić (bratpeki)
-# Type:        external app, dmenu
 # Description: Stream YouTube videos via mpv
 #              You can pass the link as an argument or type/paste it
 #              If the link is not provided at the CLI argument position,

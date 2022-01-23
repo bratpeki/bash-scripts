@@ -3,21 +3,21 @@
 
 ## Current list:
 
-| Name               | Function                                                  | Dependencies                 | Type                              |
-| -                  | -                                                         | -                            | -                                 |
-| bgman              | Manage background images using `feh`                      | `feh`                        | dmenu                             |
-| brightness         | Control the display brightness via `xrandr`               | X (`xrandr`)                 | terminal (local)                  |
-| cheat              | Easily bring up a `curl` cheat sheet from cheat.sh        | `curl`                       | terminal (local)                  |
-| goto               | Quickly open directories                                  | Any programs                 | terminal out (spawn/local), dmenu |
-| kblayout           | Manage keyboard layouts in `X`                            | X (`setxkbmap`, `localectl`) | terminal args (local), dmenu      |
-| lmmsProjectBooter  | Load projects from a specific directory into `LMMS`       | `dmenu`, `lmms`              | terminal args (local), dmenu      |
-| nerdFontItemPicker | Return specific nerd font characters into `stdout`        | `dmenu`                      | terminal out (local), dmenu       |
-| qrcodeterm         | Generate QR codes in the terminal                         | `curl`                       | terminal (local)                  |
-| screencap          | Capture the screen using `scrot`                          | `dmenu`, `scrot`             | dmenu, display                    |
-| screenrec          | Capture the screen and audio via `ALSA` and `FFMPEG`      | `ffmpeg`                     | terminal args (local), display    |
-| wtrcode            | Read weather information via `curl` using location codes  | `curl`, `dmenu`              | terminal out (local), dmenu       |
-| wtrin              | Read weather information via `curl` using input arguments | `curl`                       | terminal (local)                  |
-| ytmpv              | Stream YouTube videos via `mpv` using `youtube-dl`        | `dmenu`, `mpv`, `youtube-dl` | external app, dmenu               |
+| Name               | Function                                                  | Dependencies                 |
+| -                  | -                                                         | -                            |
+| bgman              | Manage background images using `feh`                      | `feh`                        |
+| brightness         | Control the display brightness via `xrandr`               | X (`xrandr`)                 |
+| cheat              | Easily bring up a `curl` cheat sheet from cheat.sh        | `curl`                       |
+| goto               | Quickly open directories                                  | Any programs                 |
+| kblayout           | Manage keyboard layouts in `X`                            | X (`setxkbmap`, `localectl`) |
+| lmmsProjectBooter  | Load projects from a specific directory into `LMMS`       | `dmenu`, `lmms`              |
+| nerdFontItemPicker | Return specific nerd font characters into `stdout`        | `dmenu`                      |
+| qrcodeterm         | Generate QR codes in the terminal                         | `curl`                       |
+| screencap          | Capture the screen using `scrot`                          | `dmenu`, `scrot`             |
+| screenrec          | Capture the screen and audio via `ALSA` and `FFMPEG`      | `ffmpeg`                     |
+| wtrcode            | Read weather information via `curl` using location codes  | `curl`, `dmenu`              |
+| wtrin              | Read weather information via `curl` using input arguments | `curl`                       |
+| ytmpv              | Stream YouTube videos via `mpv` using `youtube-dl`        | `dmenu`, `mpv`, `youtube-dl` |
 
 ## Requirements
 
