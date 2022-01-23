@@ -3,21 +3,21 @@
 
 ## Current list:
 
-| Name               | Function                                                  | Dependencies                 |
-| -                  | -                                                         | -                            |
-| bgman              | Manage background images using `feh`                      | `feh`                        |
-| brightness         | Control the display brightness via `xrandr`               | X (`xrandr`)                 |
-| cheat              | Easily bring up a `curl` cheat sheet from cheat.sh        | `curl`                       |
-| goto               | Quickly open directories                                  | Any programs                 |
-| kblayout           | Manage keyboard layouts in `X`                            | X (`setxkbmap`, `localectl`) |
-| lmmsProjectBooter  | Load projects from a specific directory into `LMMS`       | `dmenu`, `lmms`              |
-| nerdFontItemPicker | Return specific nerd font characters into `stdout`        | `dmenu`                      |
-| qrcodeterm         | Generate QR codes in the terminal                         | `curl`                       |
-| screencap          | Capture the screen using `scrot`                          | `dmenu`, `scrot`             |
-| screenrec          | Capture the screen and audio via `ALSA` and `FFMPEG`      | `ffmpeg`                     |
-| wtrcode            | Read weather information via `curl` using location codes  | `curl`, `dmenu`              |
-| wtrin              | Read weather information via `curl` using input arguments | `curl`                       |
-| ytmpv              | Stream YouTube videos via `mpv` using `youtube-dl`        | `dmenu`, `mpv`, `youtube-dl` |
+| Name               | Function                                                  | Dependencies                           |
+| -                  | -                                                         | -                                      |
+| bgman              | Manage background images using `feh`                      | `feh`                                  |
+| brightness         | Control the display brightness via `xrandr`               | X (`xrandr`)                           |
+| cheat              | Easily bring up a `curl` cheat sheet from cheat.sh        | `curl`                                 |
+| goto               | Quickly open directories                                  | Any programs                           |
+| kblayout           | Manage keyboard layouts in `X`                            | X (`setxkbmap`), systemd (`localectl`) |
+| lmmsProjectBooter  | Load projects from a specific directory into `LMMS`       | `dmenu`, `lmms`                        |
+| nerdFontItemPicker | Return specific nerd font characters into `stdout`        | `dmenu`                                |
+| qrcodeterm         | Generate QR codes in the terminal                         | `curl`                                 |
+| screencap          | Capture the screen using `scrot`                          | `dmenu`, `scrot`                       |
+| screenrec          | Capture the screen and audio via `ALSA` and `FFMPEG`      | `ffmpeg`                               |
+| wtrcode            | Read weather information via `curl` using location codes  | `curl`, `dmenu`                        |
+| wtrin              | Read weather information via `curl` using input arguments | `curl`                                 |
+| ytmpv              | Stream YouTube videos via `mpv` using `youtube-dl`        | `dmenu`, `mpv`, `youtube-dl`           |
 
 ## Requirements
 
@@ -41,6 +41,7 @@ This projects depends on the following binaries:
 - [ffmpeg](http://ffmpeg.org/), used for screen recording via `screenrec`
 - [mpv](https://mpv.io/), used by `ytmpv` to stream YouTube videos
 - [scrot](https://manpages.ubuntu.com/manpages/xenial/man1/scrot.1.html), used by `screencap` to capture the screen
+- [systemd](https://systemd.io/), used for getting available keyboard layouts
 - [youtube-dl](https://youtube-dl.org/), used for accessing YouTube metadata and video content
 
 ## Configuration

@@ -3,7 +3,7 @@
 # Name:        nerdFontItemPicker
 # Author:      Petar Katić (bratpeki)
 # Description: Return specific nerd font characters into stdout
-#              On an in important note, the way you apply a selected character
+#              On an important note, the way you apply a selected character
 #              to a variable is:
 #
 #              var="$(nerdFontItemPicker)"
