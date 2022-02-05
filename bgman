@@ -20,7 +20,7 @@ else
 	# Edit this location with the place you want to recursively search for the images in
 	pictureLocation="$HOME/Pictures/"
 
-	pictureLocation="$(find $pictureLocation -type f -wholename "*/.*" | dmenu -p "Picture: " -i -l 25)"
+	pictureLocation="$(find $pictureLocation -type f ! -wholename "*/.*" | dmenu -p "Picture: " -i -l 25)"
 	pictureMode="$(printf "center\nfill\nmax\nscale\ntile" | dmenu -p "Mode: " -i -l 25)"
 
 	if [ -z "$pictureLocation" ] || [ -z "$pictureMode" ]; then
