@@ -55,7 +55,6 @@ Scripts that use configuration files are listed below:
 
 | Script             | Intended use                      | Should it be manually edited? |
 | -                  | -                                 | -                             |
-| bgman              | Picutre location and mode         | ❌                            |
 | brightness         | Display you want to affect        | ✔️                             |
 | goto               | Programs to open directories with | ✔️                             |
 | kblayout           | Favorite layouts                  | ✔️                             |

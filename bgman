@@ -6,34 +6,18 @@
 #              This script is intended to be used on WM's, since most, if
 #              not all, modern DE's have their own background image tools.
 #              This one was made specifically for dwm.
-#              You should make sure "bgman -l" is run on startup to ensure
-#              that your image is applied
-# Arguments:
-#              -l (Load - Load your saved configuration)
+#              $HOME/.fehbg is created after using bgman and loads as part of
+#              my dwm's startup script
 
-locationOfCfg="$HOME/.config/bash-scripts/bgman"
+# Edit this location with the place you want to recursively search for the images in
+pictureLocation="$HOME/Pictures/"
 
-if [ "$1" == "-l" ] || [ "$1" == "-L" ]; then
-	feh --bg-$(sed '1q;d' "$locationOfCfg") "$(sed '2q;d' "$locationOfCfg")"
-else
+pictureLocation="$(find $pictureLocation -type f ! -wholename "*/.*" | dmenu -p "Picture: " -i -l 25)"
+pictureMode="$(printf "center\nfill\nmax\nscale\ntile" | dmenu -p "Mode: " -i -l 25)"
 
-	# Edit this location with the place you want to recursively search for the images in
-	pictureLocation="$HOME/Pictures/"
-
-	pictureLocation="$(find $pictureLocation -type f ! -wholename "*/.*" | dmenu -p "Picture: " -i -l 25)"
-	pictureMode="$(printf "center\nfill\nmax\nscale\ntile" | dmenu -p "Mode: " -i -l 25)"
-
-	if [ -z "$pictureLocation" ] || [ -z "$pictureMode" ]; then
-		exit
-	fi
-
-	feh --bg-$pictureMode "$pictureLocation"
-
-	if test -f "$locationOfCfg"; then
-		rm "$locationOfCfg"
-	fi
-
-	touch "$locationOfCfg"
-	printf "$pictureMode\n$pictureLocation" > "$locationOfCfg"
-
+if [ -z "$pictureLocation" ] || [ -z "$pictureMode" ]; then
+	exit
 fi
+
+feh --bg-$pictureMode "$pictureLocation"
+
