@@ -10,7 +10,7 @@
 currDir="$(pwd)"
 cd "$HOME"/Music/Prod/lmms/projects || exit
 
-fileInQuestion="$(find . -name "*.mmpz" | dmenu -i -l 25)"
+fileInQuestion="$(find . \( -name "*.mmpz" -or -name "*.mmp" \) -type f -exec realpath {} \; | dmenu -i -l 25)"
 
 if [ -z "$fileInQuestion" ]; then
 	notify-send "lmmsProjectBooter" "No selection, exiting..."
