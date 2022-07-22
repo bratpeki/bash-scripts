@@ -61,6 +61,10 @@ Scripts that use configuration files are listed below:
 | nerdFontItemPicker | Nerd font characters              | ✔️                             |
 | wtrcode            | Weather codes                     | ✔️                             |
 
+## Notes
+
+- `brightness` is less effective in comparison to [other backlight utilities](https://wiki.archlinux.org/title/Backlight#Backlight_utilities) and is considered deperecated, with removal in the future
+
 ## Thanks
 
 The following scripts were made possible by:
