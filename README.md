@@ -6,15 +6,12 @@
 | Name               | Function                                                  | Dependencies                           |
 | -                  | -                                                         | -                                      |
 | bgman              | Manage background images using `feh`                      | `feh`                                  |
-| brightness         | Control the display brightness via `xrandr`               | X (`xrandr`)                           |
 | cheat              | Easily bring up a `curl` cheat sheet from cheat.sh        | `curl`                                 |
 | goto               | Quickly open directories                                  | Any programs                           |
 | kblayout           | Manage keyboard layouts in `X`                            | X (`setxkbmap`), systemd (`localectl`) |
-| lmmsProjectBooter  | Load projects from a specific directory into `LMMS`       | `dmenu`, `lmms`                        |
 | nerdFontItemPicker | Return specific nerd font characters into `stdout`        | `dmenu`                                |
 | qrcodeterm         | Generate QR codes in the terminal                         | `curl`                                 |
 | screencap          | Capture the screen using `scrot`                          | `dmenu`, `scrot`                       |
-| screenrec          | Capture the screen and audio via `ALSA` and `FFMPEG`      | `ffmpeg`                               |
 | wtrcode            | Read weather information via `curl` using location codes  | `curl`, `dmenu`                        |
 | wtrin              | Read weather information via `curl` using input arguments | `curl`                                 |
 | ytmpv              | Stream YouTube videos via `mpv` using `youtube-dl`        | `dmenu`, `mpv`, `youtube-dl`           |
@@ -55,15 +52,10 @@ Scripts that use configuration files are listed below:
 
 | Script             | Intended use                      | Should it be manually edited? |
 | -                  | -                                 | -                             |
-| brightness         | Display you want to affect        | ✔️                             |
 | goto               | Programs to open directories with | ✔️                             |
 | kblayout           | Favorite layouts                  | ✔️                             |
 | nerdFontItemPicker | Nerd font characters              | ✔️                             |
 | wtrcode            | Weather codes                     | ✔️                             |
-
-## Notes
-
-- `brightness` is less effective in comparison to [other backlight utilities](https://wiki.archlinux.org/title/Backlight#Backlight_utilities) and is considered deperecated, with removal in the future
 
 ## Thanks
 
