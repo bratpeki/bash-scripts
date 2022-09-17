@@ -1,34 +1,30 @@
 
-# A bunch of Bash scripts I have created.
+#A bunch of Bash scripts I have created.
 
-## Current list:
+##Current list:
 
 | Name               | Function                                                  | Dependencies                           |
 | -                  | -                                                         | -                                      |
 | bgman              | Manage background images using `feh`                      | `feh`                                  |
 | cheat              | Easily bring up a `curl` cheat sheet from cheat.sh        | `curl`                                 |
-| goto               | Quickly open directories                                  | Any programs                           |
 | kblayout           | Manage keyboard layouts in `X`                            | X (`setxkbmap`), systemd (`localectl`) |
-| nerdFontItemPicker | Return specific nerd font characters into `stdout`        | `dmenu`                                |
 | qrcodeterm         | Generate QR codes in the terminal                         | `curl`                                 |
 | screencap          | Capture the screen using `scrot`                          | `dmenu`, `scrot`                       |
 | wtrcode            | Read weather information via `curl` using location codes  | `curl`, `dmenu`                        |
 | wtrin              | Read weather information via `curl` using input arguments | `curl`                                 |
 | ytmpv              | Stream YouTube videos via `mpv` using `youtube-dl`        | `dmenu`, `mpv`, `youtube-dl`           |
 
-## Requirements
+##Requirements
 
-### Adding linux-scripts to PATH
+###Adding bash-scripts to PATH
 
-If you cloned the repository to `~/github/bash-scripts`, you should add the following line to your `.bashrc`:
+If you cloned the repository to `$HOME/github/bash-scripts`, you should add the following line to your `.bashrc`:
 
 ```sh
-PATH=$PATH:~/github/bash-scripts
+PATH=$PATH:$HOME/github/bash-scripts
 ```
 
-Adding these scripts to ``$PATH`` is necessary, because many of them use ``which`` to find out where they are and access files in ``deps\``
-
-### Additional binaries
+###Dependencies
 
 This projects depends on the following binaries:
 
@@ -41,7 +37,7 @@ This projects depends on the following binaries:
 - [systemd](https://systemd.io/), used for getting available keyboard layouts
 - [youtube-dl](https://youtube-dl.org/), used for accessing YouTube metadata and video content
 
-## Configuration
+##Configuration
 
 You can configure the scripts that have configuration files via
 ```sh
@@ -52,12 +48,10 @@ Scripts that use configuration files are listed below:
 
 | Script             | Intended use                      | Should it be manually edited? |
 | -                  | -                                 | -                             |
-| goto               | Programs to open directories with | ✔️                             |
 | kblayout           | Favorite layouts                  | ✔️                             |
-| nerdFontItemPicker | Nerd font characters              | ✔️                             |
 | wtrcode            | Weather codes                     | ✔️                             |
 
-## Thanks
+##Thanks
 
 The following scripts were made possible by:
 

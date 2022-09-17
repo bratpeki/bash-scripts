@@ -3,7 +3,7 @@
 # Name:        kblayout
 # Author:      Petar Katić (bratpeki)
 # Description: Manage keyboard layouts in X
-#              deps/kblayout is to be edited manually
+#              The "locationOfCfg" variable should be edited manually
 # Arguments:
 #              -f ( Favorites - List favorites from a file)
 # Example:     None provided, script uses graphical tool(s)

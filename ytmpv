@@ -29,4 +29,3 @@ if [ "$formatID" == "0" ]; then
 fi
 
 mpv --ytdl-format=$formatID "$ytLink"
-

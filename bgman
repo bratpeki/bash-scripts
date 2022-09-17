@@ -20,4 +20,3 @@ if [ -z "$pictureLocation" ] || [ -z "$pictureMode" ]; then
 fi
 
 feh --bg-$pictureMode "$pictureLocation"
-
