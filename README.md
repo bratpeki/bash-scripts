@@ -1,4 +1,3 @@
-
 # A bunch of Bash scripts I have created.
 
 ## Current list:
@@ -56,4 +55,3 @@ Scripts that use configuration files are listed below:
 The following scripts were made possible by:
 
 - ⭐ [Igor Chubin](https://github.com/chubin)'s [wttr.in](https://github.com/chubin/wttr.in), [qrenco.de](https://github.com/chubin/qrenco.de) and [cheat.sh](https://github.com/chubin/cheat.sh)
-
