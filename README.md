@@ -3,16 +3,16 @@
 
 ## Current list:
 
-| Name               | Function                                                  | Dependencies                               |
-| -                  | -                                                         | -                                          |
-| bgman              | Manage background images using `feh`                      | `feh`                                      |
-| cheat              | Easily bring up a `curl` cheat sheet from cheat.sh        | `curl`                                     |
-| kblayout           | Manage keyboard layouts in `X11`                          | `X11` (`setxkbmap`), systemd (`localectl`) |
-| qrcodeterm         | Generate QR codes in the terminal                         | `curl`                                     |
-| screencap          | Capture the screen using `scrot`                          | `dmenu`, `scrot`                           |
-| wtrcode            | Read weather information via `curl` using location codes  | `curl`, `dmenu`                            |
-| wtrin              | Read weather information via `curl` using input arguments | `curl`                                     |
-| ytmpv              | Stream YouTube videos via `mpv` using `youtube-dl`        | `dmenu`, `mpv`, `youtube-dl`               |
+| Name               | Function                                                  |
+| -                  | -                                                         |
+| bgman              | Manage background images using `feh`                      |
+| cheat              | Easily bring up a `curl` cheat sheet from cheat.sh        |
+| kblayout           | Manage keyboard layouts in `X11`                          |
+| qrcodeterm         | Generate QR codes in the terminal                         |
+| screencap          | Capture the screen using `scrot`                          |
+| wtrcode            | Read weather information via `curl` using location codes  |
+| wtrin              | Read weather information via `curl` using input arguments |
+| ytmpv              | Stream YouTube videos via `mpv` using `youtube-dl`        |
 
 ## Requirements
 
@@ -26,16 +26,16 @@ PATH=$PATH:$HOME/github/bash-scripts
 
 ### Dependencies
 
-This projects depends on the following binaries:
-
-- [curl](https://curl.se/), used for accessing terminal-friendly web pages
-- [dmenu](https://tools.suckless.org/dmenu/), used for any list in the repo, another alternative is [fzf](https://github.com/junegunn/fzf)
-- [feh](https://github.com/derf/feh), used by ``bgman`` for loading background images
-- [ffmpeg](http://ffmpeg.org/), used for screen recording via `screenrec`
-- [mpv](https://mpv.io/), used by `ytmpv` to stream YouTube videos
-- [scrot](https://manpages.ubuntu.com/manpages/xenial/man1/scrot.1.html), used by `screencap` to capture the screen
-- [systemd](https://systemd.io/), used for getting available keyboard layouts
-- [youtube-dl](https://youtube-dl.org/), used for accessing YouTube metadata and video content
+| Tool name    | Tool provider                                                            | Script where the tool is used             | Reason for use                                                               |
+| -            | -                                                                        | -                                         | -                                                                            |
+| `curl`       | [`curl`](https://curl.se/)                                               | `cheat`, `qrcodeterm`, `wtrcode`, `wtrin` | Accessing terminal-friendly websites                                         |
+| `dmenu`      | [`dmenu`](https://tools.suckless.org/dmenu/)                             | `screencap`, `wtrcode`, `ytmpv`           | Selection making, alternatively use [`fzf`](https://github.com/junegunn/fzf) |
+| `feh`        | [`feh`](https://github.com/derf/feh)                                     | `bgman`                                   | Handle backgrounds                                                           |
+| `socalectl`  | [`systemd`](https://systemd.io/)                                         | `kblayout`                                | Getting supported keyboard layouts                                           |
+| `mpv`        | [`mpv`](https://mpv.io/)                                                 | `ytmpv`                                   | Playing video information                                                    |
+| `scrot`      | [`scrot`](https://manpages.ubuntu.com/manpages/xenial/man1/scrot.1.html) | `screencap`                               | Screenshot making                                                            |
+| `setxkbmap`  | [`X11`](https://www.x.org/wiki/)                                         | `kblayout`                                | Setting the keyboard layout                                                  |
+| `youtube-dl` | [`youtube-dl`](https://youtube-dl.org/)                                  | `ytmpv`                                   | Getting YouTube's video formats                                              |
 
 ## Configuration
 
