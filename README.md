@@ -3,16 +3,16 @@
 
 ## Current list:
 
-| Name               | Function                                                  | Dependencies                           |
-| -                  | -                                                         | -                                      |
-| bgman              | Manage background images using `feh`                      | `feh`                                  |
-| cheat              | Easily bring up a `curl` cheat sheet from cheat.sh        | `curl`                                 |
-| kblayout           | Manage keyboard layouts in `X`                            | X (`setxkbmap`), systemd (`localectl`) |
-| qrcodeterm         | Generate QR codes in the terminal                         | `curl`                                 |
-| screencap          | Capture the screen using `scrot`                          | `dmenu`, `scrot`                       |
-| wtrcode            | Read weather information via `curl` using location codes  | `curl`, `dmenu`                        |
-| wtrin              | Read weather information via `curl` using input arguments | `curl`                                 |
-| ytmpv              | Stream YouTube videos via `mpv` using `youtube-dl`        | `dmenu`, `mpv`, `youtube-dl`           |
+| Name               | Function                                                  | Dependencies                               |
+| -                  | -                                                         | -                                          |
+| bgman              | Manage background images using `feh`                      | `feh`                                      |
+| cheat              | Easily bring up a `curl` cheat sheet from cheat.sh        | `curl`                                     |
+| kblayout           | Manage keyboard layouts in `X11`                          | `X11` (`setxkbmap`), systemd (`localectl`) |
+| qrcodeterm         | Generate QR codes in the terminal                         | `curl`                                     |
+| screencap          | Capture the screen using `scrot`                          | `dmenu`, `scrot`                           |
+| wtrcode            | Read weather information via `curl` using location codes  | `curl`, `dmenu`                            |
+| wtrin              | Read weather information via `curl` using input arguments | `curl`                                     |
+| ytmpv              | Stream YouTube videos via `mpv` using `youtube-dl`        | `dmenu`, `mpv`, `youtube-dl`               |
 
 ## Requirements
 
