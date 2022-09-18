@@ -2,16 +2,16 @@
 
 ## Current list:
 
-| Name               | Function                                                  |
-| -                  | -                                                         |
-| bgman              | Manage background images using `feh`                      |
-| cheat              | Easily bring up a `curl` cheat sheet from cheat.sh        |
-| kblayout           | Manage keyboard layouts in `X11`                          |
-| qrcodeterm         | Generate QR codes in the terminal                         |
-| screencap          | Capture the screen using `scrot`                          |
-| wtrcode            | Read weather information via `curl` using location codes  |
-| wtrin              | Read weather information via `curl` using input arguments |
-| ytmpv              | Stream YouTube videos via `mpv` using `youtube-dl`        |
+| Name         | Function                                                  |
+| -            | -                                                         |
+| `bgman`      | Manage background images using `feh`                      |
+| `cheat`      | Easily bring up a `curl` cheat sheet from cheat.sh        |
+| `kblayout`   | Manage keyboard layouts in `X11`                          |
+| `qrcodeterm` | Generate QR codes in the terminal                         |
+| `screencap`  | Capture the screen using `scrot`                          |
+| `wtrcode`    | Read weather information via `curl` using location codes  |
+| `wtrin`      | Read weather information via `curl` using input arguments |
+| `ytmpv`      | Stream YouTube videos via `mpv` using `youtube-dl`        |
 
 ## Requirements
 
