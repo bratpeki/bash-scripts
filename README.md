@@ -30,7 +30,7 @@ PATH=$PATH:$HOME/github/bash-scripts
 | `curl`       | [`curl`](https://curl.se/)                                               | `cheat`, `qrcodeterm`, `wtrcode`, `wtrin` | Accessing terminal-friendly websites                                         |
 | `dmenu`      | [`dmenu`](https://tools.suckless.org/dmenu/)                             | `screencap`, `wtrcode`, `ytmpv`           | Selection making, alternatively use [`fzf`](https://github.com/junegunn/fzf) |
 | `feh`        | [`feh`](https://github.com/derf/feh)                                     | `bgman`                                   | Handle backgrounds                                                           |
-| `socalectl`  | [`systemd`](https://systemd.io/)                                         | `kblayout`                                | Getting supported keyboard layouts                                           |
+| `localectl`  | [`systemd`](https://systemd.io/)                                         | `kblayout`                                | Getting supported keyboard layouts                                           |
 | `mpv`        | [`mpv`](https://mpv.io/)                                                 | `ytmpv`                                   | Playing video information                                                    |
 | `scrot`      | [`scrot`](https://manpages.ubuntu.com/manpages/xenial/man1/scrot.1.html) | `screencap`                               | Screenshot making                                                            |
 | `setxkbmap`  | [`X11`](https://www.x.org/wiki/)                                         | `kblayout`                                | Setting the keyboard layout                                                  |
